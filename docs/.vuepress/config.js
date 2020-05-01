@@ -52,7 +52,7 @@ module.exports = {
   },
   themeConfig: {
     domain: 'https://slp.dev',
-    docsRepo: 'simpleledger/slp.dev',
+    docsRepo: 'simpleledger/simpleledger.github.io',
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
