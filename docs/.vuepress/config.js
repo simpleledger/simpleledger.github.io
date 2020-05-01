@@ -108,5 +108,11 @@ module.exports = {
       },
       ['/community', 'Community'],
     ]
+  },
+  plugins: {
+    "vuepress-plugin-matomo": {
+      siteId: 8,
+      trackerUrl: 'https://analytics.fountainhead.cash/',
+    }
   }
 };
