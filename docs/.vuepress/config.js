@@ -1,5 +1,6 @@
 module.exports = {
   base: '/',
+  dest: 'public',
   head: [
     [
       'link',
