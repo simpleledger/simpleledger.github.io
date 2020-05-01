@@ -4,7 +4,11 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.4.1",
     "vuepress": "^1.4.1",
-    "vuepress-plugin-matomo": "^1.0.2"
+    "vuepress-plugin-canonical": "^1.0.0",
+    "vuepress-plugin-clean-urls": "^1.1.1",
+    "vuepress-plugin-matomo": "^1.0.2",
+    "vuepress-plugin-seo": "^0.1.2"
   }
 }
