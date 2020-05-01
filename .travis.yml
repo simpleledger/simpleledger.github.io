@@ -2,15 +2,14 @@ language: node_js
 node_js:
   - lts/*
 install:
-  - yarn install # npm ci
+  - npm ci
 script:
-  - yarn docs:build # npm run docs:build
+  - npm run docs:build
 deploy:
   provider: pages
   skip_cleanup: true
   local_dir: docs/.vuepress/dist
-  github_token: $GITHUB_TOKEN # A token generated on GitHub allowing Travis to push code on you repository. Set in the Travis settings page of your repository, as a secure variable
-  keep_history: false
+  github_token: $GITHUB_TOKEN
   target_branch: master
   on:
-    branch: gh-pages
+    branch: test
