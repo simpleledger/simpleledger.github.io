@@ -1,5 +1,10 @@
 # SLP-Validate
 
+::: tip View Repo:
+[https://github.com/simpleledger/slp-validate](https://github.com/simpleledger/slp-validate)
+:::
+
+
 Lightweight SLP validator with pre-broadcast validation and burn protection.
 
 #### Table of Contents

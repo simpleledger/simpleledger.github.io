@@ -1,5 +1,9 @@
 # SLP Parser
 
+::: tip View Repo:
+[https://github.com/simpleledger/slp-parser.js](https://github.com/simpleledger/slp-parser.js)
+:::
+
 slp-parser is a JavaScript Library for parsing [Simple Ledger Protocol (SLP)](https://github.com/simpleledger/slp-specifications) metadata. TokenType1 and NFT1 tokens are supported. This repo is designed to be easy to port to other languages.
 
 ## Installation

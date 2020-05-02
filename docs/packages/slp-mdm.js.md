@@ -1,5 +1,9 @@
 # SLP Metadata Maker
 
+::: tip View Repo:
+[https://github.com/simpleledger/slp-metadatamaker.js](https://github.com/simpleledger/slp-metadatamaker.js)
+:::
+
 slp-mdm is a JavaScript Library for building [Simple Ledger Protocol (SLP)](https://github.com/simpleledger/slp-specifications) metadata for use in Bitcoin transactions. GENESIS, MINT, and SEND token functions are supported for TokenType1 and NFT1 tokens. This repo is designed to be easy to port to other languages, and should be combined with a transaction building library such as [bitcore-lib-cash](https://github.com/bitpay/bitcore/tree/master/packages/bitcore-lib-cash), and a validation library such as [slp-validate](https://github.com/simpleledger/slp-validate).
 
 #### Table of Contents

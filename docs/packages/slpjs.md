@@ -1,5 +1,10 @@
 # SLPJS
 
+::: tip View Repo:
+[https://github.com/simpleledger/slpjs](https://github.com/simpleledger/slpjs)
+:::
+
+
 SLPJS is a JavaScript Library for validating and building [Simple Ledger Protocol (SLP)](https://github.com/simpleledger/slp-specification/blob/master/slp-token-type-1.md) token transactions.   GENESIS, MINT, and SEND token functions are supported.  See [change log](#change-log) for updates.
 
 

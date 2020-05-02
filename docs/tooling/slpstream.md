@@ -1,5 +1,9 @@
 # SLPStream
 
+::: tip View Repo:
+[https://github.com/blockparty-sh/slpstream](https://github.com/blockparty-sh/slpstream)
+:::
+
 SLPStream is a frontend API for GS++ that provides a streaming output of new transactions. Unlike slpsockserve, SLPStream uses GS++ to for greater efficiency.
 
 https://slpstream.fountainhead.cash
