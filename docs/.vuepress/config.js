@@ -54,7 +54,7 @@ module.exports = {
     domain: 'https://slp.dev',
     docsRepo: 'simpleledger/simpleledger.github.io',
     docsDir: 'docs',
-    docsBranch: 'master',
+    docsBranch: 'develop',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
     logo: '/logo.png',
