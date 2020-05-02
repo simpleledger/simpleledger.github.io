@@ -88,6 +88,7 @@ module.exports = {
           ['/packages/slpjs', 'SLPJS'],
           ['/packages/slp-validate', 'SLP-Validate'],
           ['/packages/slp-list', 'SLP-List'],
+          ['/packages/bchaddrjs-slp', 'bchaddrjs-SLP'],
           {
             title: 'Parser',
             children: [
