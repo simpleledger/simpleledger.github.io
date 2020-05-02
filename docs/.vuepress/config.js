@@ -63,11 +63,7 @@ module.exports = {
     nav: [
     ],
     sidebar: [
-      {
-        title: 'Get Started',
-        children: [
-        ]
-      },
+      ['/get-started', 'Get Started'],
       {
         title: 'Specifications',
         children: [
