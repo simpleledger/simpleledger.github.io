@@ -14,8 +14,8 @@ NOTE: Using SLPJS requires bitbox-sdk and bitcore-lib-cash to also be installed.
 
 #### For node.js
 
-```sh
-npm install slpjs bitbox-sdk bitcore-lib-cash
+```
+$ npm install slpjs bitbox-sdk bitcore-lib-cash
 ```
 
 #### For browser (only works for versions <= 0.26.0)

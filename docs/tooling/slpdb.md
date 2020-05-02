@@ -64,18 +64,21 @@ The services `SlpServe` and `SlpSockServer` return query results as a JSON objec
 ### Full Node Settings for `bitcoin.conf`
 
 The following settings should be applied to your full node's configuration.  NOTE: The settings presented here are matched up with the default settings presented in `config.ts`, you should modify these settings and use environment variables (shown in `config.ts`) if you need a custom setup.
-* `txindex=1`
-* `server=1`
-* `rpcuser=bitcoin`
-* `rpcpassword=password`
-* `rpcport=8332`
-* `rpcworkqueue=10000`
-* `rpcthreads=8`
-* `zmqpubhashtx=tcp://*:28332`
-* `zmqpubrawtx=tcp://*:28332`
-* `zmqpubhashblock=tcp://*:28332`
-* `zmqpubrawblock=tcp://*:28332`
-* Optional: `testnet=1`
+
+```ini
+txindex=1
+server=1
+rpcuser=bitcoin
+rpcpassword=password
+rpcport=8332
+rpcworkqueue=10000
+rpcthreads=8
+zmqpubhashtx=tcp://*:28332
+zmqpubrawtx=tcp://*:28332
+zmqpubhashblock=tcp://*:28332
+zmqpubrawblock=tcp://*:28332
+testnet=1 # optional
+```
 
 ###  BCHD & gRPC Support
 
@@ -96,6 +99,7 @@ To use SLPDB with Testnet simply set your full node to the testnet network (e.g.
 **1)** Run MongoDB (`config.ts` default port is 27017)
 
 **2)** Run Bitcoin Cash full node using `bitcoin.conf` settings from above.
+* [Bitcoin Cash Node](https://bitcoincashnode.org/)
 * [BitcoinABC](https://www.bitcoinabc.org)
 * [BitcoinBU](https://www.bitcoinunlimited.info)
 

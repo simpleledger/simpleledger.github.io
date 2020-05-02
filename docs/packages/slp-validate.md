@@ -12,8 +12,8 @@ NOTE: Using SLPJS requires bitbox-sdk and bitcore-lib-cash to also be installed.
 
 #### For node.js
 
-```sh
-npm i slp-validate
+```
+$ npm i slp-validate
 ```
 
 #### For browser
