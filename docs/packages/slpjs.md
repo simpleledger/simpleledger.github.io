@@ -3,12 +3,12 @@
 SLPJS is a JavaScript Library for validating and building [Simple Ledger Protocol (SLP)](https://github.com/simpleledger/slp-specification/blob/master/slp-token-type-1.md) token transactions.   GENESIS, MINT, and SEND token functions are supported.  See [change log](#change-log) for updates.
 
 
-# Table of Contents
+#### Table of Contents
 
 [[toc]]
 
 
-# Installation
+## Installation
 
 NOTE: Using SLPJS requires bitbox-sdk and bitcore-lib-cash to also be installed.
 
@@ -25,7 +25,7 @@ npm install slpjs bitbox-sdk bitcore-lib-cash
 
 NOTE: The latest version of slpjs package will be refactored to fix this problem.
 
-# Transaction Examples
+## Transaction Examples
 
 The following code snippet examples can be copy/pasted directly into the node.js CLI.  See the examples directory for example files written in TypeScript than can be run using `tsc & node <filename>`.
 
@@ -37,7 +37,7 @@ NOTES:
 * For the fastest validation performance all of the following transaction examples show how to use SLPJS using default SLP validation via `rest.bitcoin.com`.  See the [Local Validation](#local-validation) section for instructions on how to validate SLP locally with your own full node.
 * All SLPJS methods require token quantities to be expressed in the smallest possible unit of account for the token (i.e., token satoshis).  This requires the token's precision to be used to calculate the quantity. For example, token having a decimal precision of 9 sending an amount of 1.01 tokens would need to first calculate the sending amount using `1.01 x 10^9 => 1010000000`.
 
-## Get Balances
+### Get Balances
 
 Get all balances for a given example.  See also the [TypeScript example](examples/1-get-token-balances.ts).
 
@@ -62,40 +62,43 @@ let balances;
   balances = await bitboxNetwork.getAllSlpBalancesAndUtxos(addr);
   console.log("balances: ", balances);
 })();
+```
 
-// RETURNS ALL BALANCES & UTXOs: 
+#### RETURNS ALL BALANCES & UTXOs: 
 
-// { satoshis_available_bch: 190889,
-//   satoshis_locked_in_slp_baton: 546,
-//   satoshis_locked_in_slp_token: 1092,
-//   satoshis_in_invalid_token_dag: 0,
-//   satoshis_in_invalid_baton_dag: 0,
-//   slpTokenBalances: {
-//      '1cda254d0a995c713b7955298ed246822bee487458cd9747a91d9e81d9d28125': BigNumber { s: 1, e: 3, c: [ 1000 ] },
-//      '047918c612e94cce03876f1ad2bd6c9da43b586026811d9b0d02c3c3e910f972': BigNumber { s: 1, e: 2, c: [ 100 ] } 
-//   },
-//   nftParentChildBalances: {
-//      'parentId1': {
-//            'childId1': BigNumber
-//            'childId2': BigNumber
-//      }
-//      'parentId2': {
-//            'childId1': BigNumber
-//            'childId2': BigNumber
-//      }
-//   }
-//   slpTokenUtxos: [ ... ],
-//   slpBatonUtxos: [ ... ],
-//   invalidTokenUtxos: [ ... ],
-//   invalidBatonUtxos: [ ... ],
-//   nonSlpUtxos: [ ... ]
-//   unknownTokenTypeUtxos: [ ... ]
-// }
+```js
+{
+  satoshis_available_bch: 190889,
+  satoshis_locked_in_slp_baton: 546,
+  satoshis_locked_in_slp_token: 1092,
+  satoshis_in_invalid_token_dag: 0,
+  satoshis_in_invalid_baton_dag: 0,
+  slpTokenBalances: {
+    '1cda254d0a995c713b7955298ed246822bee487458cd9747a91d9e81d9d28125': BigNumber { s: 1, e: 3, c: [ 1000 ] },
+    '047918c612e94cce03876f1ad2bd6c9da43b586026811d9b0d02c3c3e910f972': BigNumber { s: 1, e: 2, c: [ 100 ] }
+  },
+  nftParentChildBalances: {
+    'parentId1': {
+      'childId1': BigNumber
+      'childId2': BigNumber
+    },
+    'parentId2': {
+      'childId1': BigNumber
+      'childId2': BigNumber
+    }
+  },
+  slpTokenUtxos: [ ... ],
+  slpBatonUtxos: [ ... ],
+  invalidTokenUtxos: [ ... ],
+  invalidBatonUtxos: [ ... ],
+  nonSlpUtxos: [ ... ],
+  unknownTokenTypeUtxos: [ ... ]
+}
 ```
 
 
 
-## GENESIS - Create a new token
+### GENESIS - Create a new token
 
 GENESIS is the most simple type of SLP transaction since no special inputs are required.  The following example shows how to create a fungible token.  Also see the TypeScript examples for: 
 * [Type 1 Genesis](examples/3-genesis-token-type-1.ts).
@@ -173,7 +176,7 @@ let genesisTxid;
 
 ```
 
-## MINT - Create additional tokens
+### MINT - Create additional tokens
 
 Adding additional tokens for a token that already exists is possible if you are in control of the minting "baton".  This minting baton is a special UTXO that gives authority to add to the token's circulating supply.  Also see the [TypeScript example](examples/6-mint-token.ts).
 
@@ -258,7 +261,7 @@ let mintTxid;
 
 
 
-## SEND - Send tokens
+### SEND - Send tokens
 
 This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](examples/7-send-token-p2pkh.ts).
 
@@ -338,7 +341,7 @@ let sendTxid;
 })();
 ```
 
-## SEND - Send BCH
+### SEND - Send BCH
 
 This example demonstrates how to send BCH from a SLP enabled wallet. This API ensures the BCH transaction does not use SLP UTXOs which can cause token loss for the wallet.
 
@@ -401,7 +404,7 @@ let sendTxId;
 ```
 
 
-## SEND - Send tokens from a frozen address
+### SEND - Send tokens from a frozen address
 
 This example shows how to freeze funds until a future time using OP_CLTV.  Also see the [TypeScript example](examples/8-send-token-p2sh-frozen.ts).  First, the address is calculated based on a user-defined public key and locktime. After the locktime has elapsed the user can proceed to spend those funds as demonstrated in this example:
 
@@ -519,7 +522,7 @@ let sendTxid;
 
 ```
 
-## SEND - Send tokens from 2-of-2 multisig (P2SH)
+### SEND - Send tokens from 2-of-2 multisig (P2SH)
 
 This example shows the general workflow for sending tokens from a P2SH multisig address.  Also see the [TypeScript example](examples/9-send-token-p2sh-multisig.ts).  Electron Cash SLP edition [3.4.13](https://simpleledger.cash/project/electron-cash-slp-edition/) is compatible with signing the partially signed transactions generated from this example by using the `insert_input_values_for_EC_signers` helper method.
 
@@ -618,7 +621,7 @@ let sendTxid;
 })();
 ```
 
-## BURN - Destroy tokens for a certain Token Id
+### BURN - Destroy tokens for a certain Token Id
 
 This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](examples/10-burn-token.ts).
 
@@ -683,7 +686,7 @@ let sendTxid;
 ```
 
 
-## Address Conversion
+### Address Conversion
 
 ```javascript
 let Utils = require('slpjs').Utils;
@@ -699,7 +702,7 @@ console.log(cashAddr);
 
 
 
-# Validation Examples
+## Validation Examples
 
 The following examples show three different ways how you can use this library to validate SLP transactions.  The validation techniques include:
 
@@ -709,7 +712,7 @@ The following examples show three different ways how you can use this library to
 
 
 
-## Local Validator with a JSON RPC full node connection
+### Local Validator with a JSON RPC full node connection
 
 Validate SLP transaction locally with a local full node.
 
@@ -741,7 +744,7 @@ let isValid;
 
 
 
-## Local Validation with a remote full node (using `rest.bitcoin.com`)
+### Local Validation with a remote full node (using `rest.bitcoin.com`)
 
 Validate SLP transaction locally with a remote full node (i.e., rest.bitcoin.com).
 
@@ -772,7 +775,7 @@ let isValid;
 
 
 
-## Remote Validation (using `rest.bitcoin.com`)
+### Remote Validation (using `rest.bitcoin.com`)
 
 Validate SLP transaction using rest.bitcoin.com. 
 
@@ -802,15 +805,15 @@ let isValid;
 
 
 
-# Building & Testing
+## Building & Testing
 
 Building this project creates lib/*.js files and then creates browserified versions in the dist folder.
 
-## Requirements
+### Requirements
 Running the unit tests require node.js v8.15+. 
 
-## Build
+### Build
 `npm run build`
 
-## Test
+### Test
 `npm run test`

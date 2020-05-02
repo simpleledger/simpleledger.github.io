@@ -2,7 +2,11 @@
 
 Lightweight SLP validator with pre-broadcast validation and burn protection.
 
-# Installation
+#### Table of Contents
+
+[[toc]]
+
+## Installation
 
 NOTE: Using SLPJS requires bitbox-sdk and bitcore-lib-cash to also be installed.
 
@@ -17,11 +21,11 @@ npm i slp-validate
 <script src='https://unpkg.com/slp-validate'></script>
 ```
 
-# Example Usage
+## Example Usage
 
 The recommended method to use for validation is `ValidatorType1.isValidSlpTxn()`. This method can check transaction validity before it is broadcast to the network to prevent accidental burning.
 
-## RPC With Burn Protection
+### RPC With Burn Protection
 
 Prevents accidental sending of a valid burn transaction
 
@@ -75,7 +79,7 @@ const txn = "01000000067fb42e8fdf232ae50f8dc5e558252fba30336ae83b6e45e138f5b9222
 })();
 ```
 
-## RPC Perform Burn
+### RPC Perform Burn
 
 Allows sending a valid burn transaction
 
@@ -120,7 +124,7 @@ const txn = "01000000067fb42e8fdf232ae50f8dc5e558252fba30336ae83b6e45e138f5b9222
 })();
 ```
 
-## RPC Without Burn Protection
+### RPC Without Burn Protection
 
 Traditional SLP validate method by txid (offers no extra burn protection).
 
@@ -157,7 +161,7 @@ const txid = "3ff425384539519e815507f7f6739d9c12a44af84ff895601606b85157e0fb19";
 })();
 ```
 
-## BCHD RPC Without Burn Protection
+### BCHD RPC Without Burn Protection
 
 Similar to RPC Without Burn Protection, but uses BCHD's gRPC instead of JSON RPC
 
@@ -197,7 +201,7 @@ const txid = "cecf484fa8b65b938131392e8e0e0a83a939c83d2e3f6673e28349ad5cc74244";
 })();
 ```
 
-## GS++
+### GS++
 
 Validate more quickly by downloading transactions in bulk from SLP graph search instead of downloading transactions individually via RPC
 
