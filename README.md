@@ -4,6 +4,7 @@
 
 ```
 git clone https://github.com/simpleledger/simpleledger.github.io
+cd simpleledger.github.io
 npm i
 npm run docs:dev
 ```
