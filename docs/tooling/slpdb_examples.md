@@ -22,7 +22,7 @@ const fetch_retry = (url, options, n=5) => fetch(url, options).catch(function(er
   return new Promise((resolve) => {
     setTimeout(() => resolve(fetch_retry(url, options, n - 1)), 1000);
   });
-}),
+});
 
 const btoa_ext = (buf) => Buffer.from(buf).toString('base64');
 
