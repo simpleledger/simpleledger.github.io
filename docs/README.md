@@ -17,7 +17,7 @@ Within minutes you can create your own token and start interacting with the bloc
 
 ## See what others are building
 
-Are you looking for inspiration? You can find a huge collection of awesome community projects over at Awesome IPFS. 
+Are you looking for inspiration? You can find a collection of awesome community projects over at simpleledger.cash. 
 
 [Check out Featured SLP Projects now →](https://simpleledger.cash/featured-projects/)
 
