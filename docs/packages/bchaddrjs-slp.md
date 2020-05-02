@@ -9,13 +9,13 @@
 
 ### Using NPM
 
-```bsh
+```
 $ npm install --save bchaddrjs-slp
 ```
 
 ### Using Bower
 
-```bsh
+```
 $ bower install --save bchaddrjs-slp
 ```
 
