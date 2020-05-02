@@ -1,37 +1,8 @@
-![SLPDB](assets/slpdb_logo.png)
+# SLPDB
 
-# SLPDB Readme
-**Last Updated:** 2020-03-22
+[[toc]]
 
-**Current SLPDB Version:** 1.0.0-rc6
-
-* 1. [What is SLPDB?](#WhatisSLPDB)
-* 2. [Do you need to <u>install</u> SLPDB?](#DoyouneedtouinstalluSLPDB)
-* 3. [How do I query for SLP data?](#HowdoIqueryforSLPdata)
-	* 3.1. [Working with Large Numbers (`Decimal128` and `BigNumber`)](#WorkingwithLargeNumbersDecimal128andBigNumber)
-* 4. [Installation & Setup Instructions](#InstallationInstructions)
-	* 4.1. [Prerequisites](#Prerequisites)
-	* 4.2. [Full Node Settings for `bitcoin.conf`](#FullNodeSettingsforbitcoin.conf)
-    * 4.3  [BCHD & gRPC Support](#BCHDgRPCSupport)
-	* 4.4. [Testnet Support](#TestnetSupport)
-	* 4.5. [Running SLPDB](#RunningSLPDB)
-	* 4.6. [Updating SLPDB](#UpdatingSLPDB)
-    * 4.7. [Filtering for Specific Token ID](#Filtering)
-    * 4.8. [Pruning](#Pruning)
-* 5. [Real-time Notifications](#Real-timeNotifications)
-	* 5.1. [ZeroMQ (ZMQ)](#ZeroMQZMQ)
-    * 5.2. [HTTP Gateways](#HTTPGateways)
-* 6. [MongoDB Collections & Data Schema](#MongoDBCollectionsDataSchema)
-	* 6.1. [DB Collections](#DBCollections)
-* 7. [Test Harnesses](#TestHarnesses)
-    * 7.1 [Parser Tests](#ParserTests)
-    * 7.2 [Input Tests](#InputTests)
-    * 7.3 [Regtest Network Tests](#E2ETests)
-* 8. [Change Log](#ChangeLog)
-
-
-
-##  1. <a name='WhatisSLPDB'></a>What is SLPDB?
+## What is SLPDB?
 
 SLPDB is an indexer service for storing all data related to the Simple Ledger Protocol with realtime transaction and block notifications.  Users can build block explorers (e.g., https://simpleledger.info), track token burn and mint history, track mint baton status, generate token holder lists at any block height, and easily determine state for script based smart contracts.  Web sites and services can easily create new routes for SLP data when using the [SlpServe](https://github.com/fountainhead-cash/slpserve) and [SlpSockServe](https://github.com/fountainhead-cash/slpsockserve) http gateways.  
 
@@ -41,7 +12,7 @@ Live status of nodes running slpdb can be found at: https://status.slpdb.io.
 
 
 
-##  2. <a name='DoyouneedtouinstalluSLPDB'></a>Do you need to <u>install</u> SLPDB?
+## Do you need to <u>install</u> SLPDB?
 
 Most likely you do <u>not</u> need to install SLPDB.  Most users will be better off using someone else's publicly shared SLPDB instance like https://slpdb.fountainhead.cash or https://slpdb.bitcoin.com.  You only need to install SLPDB, SlpServe, and/or SlpSockServe if any of the following is true:
 
@@ -53,7 +24,7 @@ NOTE: If you are going to operate your own SLPDB instance you should join the te
 
 
 
-##  3. <a name='HowdoIqueryforSLPdata'></a>How do I query for SLP data?
+## How do I query for SLP data?
 
 Queries into SLPDB data are made using [bitquery](https://docs.bitdb.network/docs/query_v3#2-what) which allows MongoDB queries and jq queries over HTTP. Here are some example SLPDB queries:
 
@@ -73,7 +44,7 @@ Queries into SLPDB data are made using [bitquery](https://docs.bitdb.network/doc
 Users should utilize the [SlpServe](https://github.com/fountainhead-cash/slpserve) and [SlpSockServer](https://github.com/fountainhead-cash/slpsockserve) projects in order to conveniently query for the SLP data produced by SLPDB.
 
 
-###  3.1. <a name='WorkingwithLargeNumbersDecimal128andBigNumber'></a>Working with Large Numbers (`Decimal128` and `BigNumber`)
+###  Working with Large Numbers (`Decimal128` and `BigNumber`)
 
 Some of the values used in SLP require 64 or more bits of precision, which is more precision than `number` type can provide. To ensure value precision is maintained values are stored in collections using the `Decimal128` type.  `Decimal128` allows users to make database queries using query comparison operators like `$gte`.  
 
@@ -81,16 +52,16 @@ The services `SlpServe` and `SlpSockServer` return query results as a JSON objec
 
 
 
-##  4. <a name='InstallationInstructions'></a>Installation Instructions
+## Installation Instructions
 
-###  4.1. <a name='Prerequisites'></a>Prerequisites
+### Prerequisites
 * Node.js 12
 * MongoDB 4.0+
 * BitcoinABC, BitcoinUnlimited, BCHD, or other Bitcoin Cash full node with:
   * RPC-JSON (or gRPC) and 
   * ZeroMQ event notifications
 
-###  4.2. <a name='FullNodeSettingsforbitcoin.conf'></a>Full Node Settings for `bitcoin.conf`
+### Full Node Settings for `bitcoin.conf`
 
 The following settings should be applied to your full node's configuration.  NOTE: The settings presented here are matched up with the default settings presented in `config.ts`, you should modify these settings and use environment variables (shown in `config.ts`) if you need a custom setup.
 * `txindex=1`
@@ -106,11 +77,11 @@ The following settings should be applied to your full node's configuration.  NOT
 * `zmqpubrawblock=tcp://*:28332`
 * Optional: `testnet=1`
 
-###  4.3. <a name='BCHDgRPCSupport'></a>BCHD & gRPC Support
+###  BCHD & gRPC Support
 
 High speed gRPC is supported with BCHD 0.15.2+ full nodes in place of JSON RPC and incoming ZMQ notifications.  To enable, add the environment variables `grpc_url` and `grpc_certPath`.  See the `example.env` file in this project and the [BCHD documentation](https://github.com/gcash/bchd/tree/master/docs) for more details.  For instructions on installing a self-signed certificate see guidance [here](https://github.com/simpleledgerinc/grpc-bchrpc-node#connecting-to-local-bchd).
 
-###  4.4. <a name='TestnetSupport'></a>Testnet Support
+### Testnet Support
 
 To use SLPDB with Testnet simply set your full node to the testnet network (e.g., set `testnet=1` within `bitcoin.conf`) and SLPDB will automatically instantiate using proper databases names according to the network.  For informational purposes the database names are as follows:
 * **Mainnet**
@@ -120,7 +91,7 @@ To use SLPDB with Testnet simply set your full node to the testnet network (e.g.
   * Mongo db name = `slpdb_testnet`
   * Testnet diectory = `./_leveldb_testnet`
 
-###  4.5. <a name='RunningSLPDB'></a>Running SLPDB
+### Running SLPDB
 
 **1)** Run MongoDB (`config.ts` default port is 27017)
 
@@ -138,7 +109,7 @@ To use SLPDB with Testnet simply set your full node to the testnet network (e.g.
 
 **5)** Install and run [slpserve](https://github.com/fountainhead-cash/slpserve) and/or [slpsocket](https://github.com/simpleledger/sockserve) to access SLP token data and statistics
 
-###  4.6. <a name='UpdatingSLPDB'></a>Updating SLPDB
+### Updating SLPDB
 
 **1)** Execute `git pull origin master` to update to latest version.
 
@@ -148,19 +119,19 @@ To use SLPDB with Testnet simply set your full node to the testnet network (e.g.
 
 **4)** Restart SLPDB.
 
-### 4.7. <a name='Filtering'></a>Filtering SLPDB to specific Token IDs
+### Filtering SLPDB to specific Token IDs
 
 Modify the `example-filters.yml` file to suit your needs and then rename it as `filters.yml` to activate the filtering.  Currently, `include-single` is the only filter type available, reference the example file for useage requirements.
 
-### 4.8. <a name='Pruning'></a>Pruning
+### Pruning
 
 Pruning removes totally spent and aged transactions from the global transaction cache, the token graph, and the validator cache.  Pruning occurs after a transaction has been totally spent and is aged more than 10 blocks.  At this time there is no custom configuration available for pruning.
 
 
 
-##  5. <a name='Real-timeNotifications'></a>Real-time Notifications
+##  Real-time Notifications
 
-###  5.1. <a name='ZeroMQZMQ'></a>ZeroMQ (ZMQ)
+### ZeroMQ (ZMQ)
 
 SLPDB publishes the following notifications via [ZMQ](http://zeromq.org/intro:read-the-manual) and can be subscribed to by binding to http://0.0.0.0:28339.  The following events can be subscribed to:
 * `mempool`
@@ -201,13 +172,13 @@ Each notification is published in the following data format:
 }
 ```
 
-### 5.2 <a name='HTTPGateways'></a>HTTP Gateways
+### HTTP Gateways
 
 Realtime SLP notifications can be accessed via HTTP server-sent events (SSE) by utilizing [SlpSocketServe](https://github.com/fountainhead-cash/slpsockserve).  A good alternative to SLPDB based realtime notifications is [SlpStream](https://github.com/blockparty-sh/slpstream) which utilizes the gs++ backend.
 
 
 
-##  6. <a name='MongoDBCollectionsDataSchema'></a>MongoDB Collections & Data Schema
+##  MongoDB Collections & Data Schema
 
 Three categories of information are stored in MongoDB:
 
@@ -215,7 +186,7 @@ Three categories of information are stored in MongoDB:
 2. Statistical calculations about each token, and 
 3. Token graph state 
 
-###  6.1. <a name='DBCollections'></a>DB Collections
+### DB Collections
 
 Four MongoDB collections used to store these three categories of data, they are as follows:
 
@@ -322,23 +293,23 @@ Four MongoDB collections used to store these three categories of data, they are 
 
 
 
-## 7. <a name='TestHarnesses'></a>Test Harnesses
+## Test Harnesses
 
 SLPDB is backed by three distinct test harnesses, they include (1) OP_RETURN message parsing unit tests and differential fuzzing, (2) graph input unit tests, and (3) end-to-end regression testing.
 
-###  7.1. <a name='ParserTests'></a>Parser Tests
+### Parser Tests
 
 SLPDB leverages the SLPJS npm library has been tested using differential fuzzing and passes all SLP message parser unit tests for Token Type 1 and NFT1.  You can learn more about this testing at the following locations:
 * [SLP Unit Tests - Parsing of OP_RETURN scripts](https://github.com/simpleledger/slp-unit-test-data#part-a-parsing-of-op_return-scripts)
 * [JS Fuzzer](https://github.com/simpleledger/slp-validate/tree/master/fuzzer)
 * [c++ fuzzers](https://github.com/blockparty-sh/cpp_slp_graph_search/tree/master/fuzz)
 
-###  7.2. <a name='InputTests'></a>Input Tests
+###  Input Tests
 
 Graph validation typically requires checking that a transactions's valid inputs the outputs specified in the SLP OP_RETURN message. 
 The SLPJS npm library also passes all unit tests which test for the specified input requirements for Token Type 1 and NFT1, and you can learn more about these types of tests at the following location:
 * [SLP Unit Tests - Transaction input tests](https://github.com/simpleledger/slp-unit-test-data#part-b-transaction-input-tests)
 
-###  7.3. <a name='E2ETests'></a>End-to-End Tests
+### End-to-End Tests
 
 A set of end-to-end tests have been created in order to ensure the expected behavior of SLPDB utilizing the bitcoin regtest network.  These tests simulate actual transaction activity using the bitcoin regtest test network and check for proper state in mongoDB and also check that zmq notifications are emitted.  The `tests` directory contains the end-to-end tests which can be run by following the instructions provided in the `regtest` directory.
