@@ -111,6 +111,7 @@ module.exports = {
             title: 'SLPDB',
             children: [
               ['/tooling/slpdb', 'SLPDB'],
+              ['/tooling/slpdb_examples', 'SLPDB Examples'],
               ['/tooling/slpserve', 'SLPServe'],
               ['/tooling/slpsocket', 'SLPSocket'],
             ],
