@@ -467,7 +467,7 @@ const address_burn_history = (address, limit=100, skip=0) => query({
 });
 ```
 
-### Get burn history of all tokens
+### Get Burn History of all Tokens
 
 ```js
 const total_burn_history = (limit=100, skip=0) => query({
@@ -759,7 +759,7 @@ const recent_tokens = (limit=100, skip=0) => query({
 
 ## Counting
 
-### Count how many tokens there are
+### Count Total Tokens
 
 ```js
 const count_tokens = () => query({
@@ -784,7 +784,7 @@ const count_tokens = () => query({
 });
 ```
 
-### Count total tokens minted
+### Count Total Tokens Minted
 
 ```js
 const token_get_total_minted = (tokenIdHex) => query({
@@ -1404,7 +1404,7 @@ const count_total_burn_transactions = () => query({
   'r': {
     'f': '[ .[] | {count: .count } ]',
   },
-}),
+});
 ```
 
 ### Count of Tokens an Address Holds
