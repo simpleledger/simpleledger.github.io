@@ -90,6 +90,10 @@ The amount of [satoshis](#satoshi) associated with [outputs](#output) that conta
 
 The most common operation in SLP, the simple act of transferring some tokens to someone else.
 
+## Staking
+
+Staking is a scheme where token holders who have older [UTXOs](#utxo) receive some benefit, such as dividends or voting privileges.
+
 ## Token
 
 A token is some sort of tokenized asset or idea that has an associated [token id](#token-id) and was created using a [Genesis](#genesis) transaction. There are SLP Tokens, as well as tokens on other Blockchains as well.
