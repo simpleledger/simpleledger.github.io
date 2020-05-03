@@ -80,6 +80,7 @@ module.exports = {
       {
         title: 'Guides',
         children: [
+          ['/guides/overview', 'Overview'],
           ['/guides/slp-implementation-instructions', 'Implementation Instructions'],
         ]
       },
