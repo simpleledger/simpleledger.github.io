@@ -139,6 +139,7 @@ module.exports = {
           {
             title: 'Wallets',
             children: [
+              ['/tooling/wallets', 'Overview'],
               ['/tooling/ecslp', 'Electron Cash SLP'],
               ['/tooling/badger', 'Badger'],
               ['/tooling/mint', 'Mint'],
