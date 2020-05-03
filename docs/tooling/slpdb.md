@@ -13,13 +13,13 @@ SLPDB is an indexer service for storing all data related to the Simple Ledger Pr
 
 SLPDB records all SLP token data, but it can be easily configured to only look at a specified subset of tokens using the token filtering feature.  Filtering for your specific needs can drastically improve realtime notification speed, reduce initial db sync time, and reduce the db footprint.
 
-Live status of nodes running slpdb can be found at: https://status.slpdb.io.
+Live status of nodes running slpdb can be found at: [https://status.slpdb.io](https://status.slpdb.io).
 
 
 
 ## Do you need to <u>install</u> SLPDB?
 
-Most likely you do <u>not</u> need to install SLPDB.  Most users will be better off using someone else's publicly shared SLPDB instance like https://slpdb.fountainhead.cash or https://slpdb.bitcoin.com.  You only need to install SLPDB, SlpServe, and/or SlpSockServe if any of the following is true:
+Most likely you do <u>not</u> need to install SLPDB.  Most users will be better off using someone else's publicly shared SLPDB instance like [https://slpdb.fountainhead.cash](https://slpdb.fountainhead.cash) or [https://slpdb.bitcoin.com](https://slpdb.bitcoin.com).  You only need to install SLPDB, SlpServe, and/or SlpSockServe if any of the following is true:
 
 - You cannot rely on a third-party for your SLP data.
 - The rate limits imposed by `slpdb.fountainhead.cash` or `slpdb.bitcoin.com` are too restrictive for your needs.
