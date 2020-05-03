@@ -17,7 +17,8 @@ Badger is your identity on this new web. You can pay for premium content, run sm
 
 Powered by BITBOX, Badger is 100% non-custodial. Your private keys never leave your computer.
 
+[Check out the wallet →](https://badger.bitcoin.com/)
+
 ## Documentation
 
 Documentation for Badger is hosted on [https://developer.bitcoin.com/badger/](https://developer.bitcoin.com/badger/)
-

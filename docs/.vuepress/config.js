@@ -140,6 +140,7 @@ module.exports = {
             children: [
               ['/tooling/ecslp', 'Electron Cash SLP'],
               ['/tooling/badger', 'Badger'],
+              ['/tooling/mint', 'Mint'],
               ['/tooling/crescentcash', 'Crescent Cash'],
               ['/tooling/bitcoincomwallet', 'Bitcoin.com Wallet'],
               ['/tooling/monarch', 'Monarch'],
