@@ -23,7 +23,7 @@ You can visit [simpleledger.info](https://simpleledger.info/) and search for the
 
 Just swap out the tokenIdHex with the tokenId of your newly created token [here](https://slpdb.fountainhead.cash/explorer/ewogICJ2IjogMywKICAicSI6IHsKICAgICJmaW5kIjogewogICAgICAidG9rZW5EZXRhaWxzLnRva2VuSWRIZXgiOiAiN2Y4ODg5NjgyZDU3MzY5ZWQwZTMyMzM2ZjhiN2UwZmZlYzYyNWEzNWNjYTE4M2Y0ZTgxZmRlNGU3MWE1MzhhMSIKICAgIH0sCiAgICAibGltaXQiOiAxMAogIH0KfQ==) and click "Run query". This will find the token and any token graph data. This is how the explorer is built, it's a bunch of SLPDB queries.
 
-For testnet, just change the url from slpdb to [tslpdb](https://tslpdb.fountainhead.cash/explorer/ewogICJ2IjogMywKICAicSI6IHsKICAgICJmaW5kIjogewogICAgICAidG9rZW5EZXRhaWxzLnRva2VuSWRIZXgiOiAiN2Y4ODg5NjgyZDU3MzY5ZWQwZTMyMzM2ZjhiN2UwZmZlYzYyNWEzNWNjYTE4M2Y0ZTgxZmRlNGU3MWE1MzhhMSIKICAgIH0sCiAgICAibGltaXQiOiAxMAogIH0KfQ==).
+For testnet, just change the url from slpdb to [slpdb-testnet](https://slpdb-testnet.fountainhead.cash/explorer/ewogICJ2IjogMywKICAicSI6IHsKICAgICJmaW5kIjogewogICAgICAidG9rZW5EZXRhaWxzLnRva2VuSWRIZXgiOiAiNjUwZGVhMTRjNzdmNGQ3NDk2MDhlMzZlMzc1NDUwYzlhYzkxZGViOGIxYjUzZTUwY2IwZGUyMDU5YTUyZDE5YSIKICAgIH0sCiAgICAibGltaXQiOiAxMAogIH0KfQ==).
 
 ## Automate Sending SLP Tokens
 
