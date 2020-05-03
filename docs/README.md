@@ -13,7 +13,7 @@ description: The home page for developer documentation for SLP, the Simple Ledge
 
 Within minutes you can create your own token and start interacting with the blockchain immediately. 
 
-[Start the tutorial →](/guides/create-token/)
+[Start the tutorial →](/get-started/#create-a-token)
 
 ## See what others are building
 
