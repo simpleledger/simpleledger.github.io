@@ -1,5 +1,7 @@
 # Wallets
 
+[[toc]]
+
 ## Comparison
 
 |                                 | Electron Cash SLP | memo.cash       | Bitcoin.com mobile | mint.bitcoin.com | Badger mobile | Badger browser | Crescent Cash | Blockparty Wallet | Electron Cash     | HoneyPoints/HoneyPay |
