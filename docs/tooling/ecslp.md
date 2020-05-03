@@ -6,13 +6,23 @@
 
 Electron Cash SLP is a fully featured SLP light-wallet implementation that can Create, Mint, Burn, and Send SLP tokens and much more. This wallet validates all token transactions locally requiring no special SLP aware servers or infrastructure. Electron Cash wallet was built by the Electron Cash developers.
 
+## Testnet
+
+Start Electron Cash with the `--testnet` flag to use testnet mode.
+
+```
+$ electron-cash --testnet
+```
+
+You can get free tBCH from [https://faucet.fullstack.cash/](https://faucet.fullstack.cash/).
+
 
 ## CLI Interface
 
 Electron Cash SLP Edition can be used in the development of SLP applications, often being very useful for automating transactions to test deposit detection among other tasks. You can also do `electron-cash --help` to see the full list of commands, and more advanced options for the following items.
 
 ::: warning
-Be sure to not perform any broadcasts from a non-testing wallet. Failure to ensure this could mean you lose your SLP tokens or BCH.
+Be sure to not perform any broadcasts from a non-testing wallet until you know what you are doing. Failure to ensure this could mean you lose your SLP tokens or BCH.
 :::
 
 ### Get Balance
