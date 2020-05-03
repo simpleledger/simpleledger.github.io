@@ -114,6 +114,7 @@ module.exports = {
         children: [
           ['/tooling/overview', 'Overview'],
           ['/tooling/explorer', 'Explorer'],
+          ['/tooling/slp-unit-test-data', 'Unit Tests'],
           {
             title: 'SLPDB',
             children: [
