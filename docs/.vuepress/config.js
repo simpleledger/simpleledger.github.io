@@ -136,6 +136,7 @@ module.exports = {
               ['/tooling/fuzz', 'fuzz'],
             ]
           },
+          ['/tooling/slp-indexer', 'Bitcoin.com SLP Indexer'],
           {
             title: 'Wallets',
             children: [

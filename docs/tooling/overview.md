@@ -24,6 +24,12 @@ GS++ is a high performance validator, indexer, and graph search server. This all
 
 [View →](/tooling/gs++)
 
+## Bitcoin.com SLP-Indexer
+
+SLP-Indexer is a service that listens to the Bitcoin Cash blockchain for SLP-token transactions. When it finds an SLP transaction it will parse, validate and save it in the database for easy and fast access
+
+[View →](/tooling/slp-indexer)
+
 ## Wallets
 
 The reference implementation wallet for SLP is [Electron Cash SLP Edition](/wallets/ecslp), however this is a more advanced and technical wallet compared to some of the others.
