@@ -6,6 +6,12 @@ SLP-Explorer is the first explorer built specifically for SLP transactions. It i
 
 [View →](/tooling/explorer)
 
+## Unit Tests
+
+Test vectors for ensuring that validators of the Simple Ledger Protocol (SLP) follow consensus. Make sure to pass all of these if you are implementing SLP.
+
+[View →](/tooling/slp-unit-test-data)
+
 ## SLPDB
 
 SLPDB is the most advanced indexer for SLP transactions, and allows you to perform advanced queries upon it. We have dedicated a whole page of [examples](/tooling/slpdb_examples) to help you get up to speed right away with the most common types of queries.
