@@ -32,24 +32,15 @@ The recommended method to use for validation is `ValidatorType1.isValidSlpTxn()`
 
 ### RPC With Burn Protection
 
-Prevents accidental sending of a valid burn transaction
+Check transaction validity pre-broadcast. This example prevents burning
+tokens in otherwise valid SLP transactions.  Even though both
+transactions listed below are both valid in terms of SLP consensus rules,
+this example code catches Error thrown when "valid inputs > outputs" and
+returns invalid.
 
 ```ts
-/***************************************************************************************
- *
- *  Example 1: Check transaction validity pre-broadcast. This example prevents burning
- *              tokens in otherwise valid SLP transactions.  Even though both
- *              transactions listed below are both valid in terms of SLP consensus rules,
- *              this example code catches Error thrown when "valid inputs > outputs" and
- *              returns invalid.
- *
- *              See Example 2 to learn how to allow burning.
- *
- *  Instructions:
- *      (1) - Set bitcoind RPC user, password, and URL.
- *      (2) - Optional: set custom transaciton hex data.
- *
- * ************************************************************************************/
+// Set bitcoind RPC user, password, and URL.
+// Optional: set custom transaciton hex data.
 
 import { Big } from "big.js";
 import { ValidatorType1 } from "../lib/index";
@@ -86,19 +77,12 @@ const txn = "01000000067fb42e8fdf232ae50f8dc5e558252fba30336ae83b6e45e138f5b9222
 
 ### RPC Perform Burn
 
-Allows sending a valid burn transaction
+Check transaction validity pre-broadcast. This example allows burning
+tokens in a valid SLP transaction.
 
 ```ts
-/***************************************************************************************
- *
- *  Example 2: Check transaction validity pre-broadcast. This example allows burning
- *              tokens in a valid SLP transaction.
- *
- *  Instructions:
- *      (1) - Set bitcoind RPC user, password, and URL.
- *      (2) - Optional: set custom transaciton hex data.
- *
- * ************************************************************************************/
+// Set bitcoind RPC user, password, and URL.
+// Optional: set custom transaciton hex data.
 
 import { Big } from "big.js";
 import { ValidatorType1 } from "../lib/index";
@@ -134,15 +118,8 @@ const txn = "01000000067fb42e8fdf232ae50f8dc5e558252fba30336ae83b6e45e138f5b9222
 Traditional SLP validate method by txid (offers no extra burn protection).
 
 ```ts
-/***************************************************************************************
- *
- *  Example 3: Validate a specific txid.  This method comes with no burn protections.
- *
- *  Instructions:
- *      (1) - Set bitcoind RPC user, password, and URL.
- *      (2) - Optional: set custom txid.
- *
- * ************************************************************************************/
+// Set bitcoind RPC user, password, and URL.
+// Optional: set custom txid.
 
 import { ValidatorType1 } from "../lib/index";
 const RpcClient = require("bitcoin-rpc-promise-retry");
@@ -171,15 +148,8 @@ const txid = "3ff425384539519e815507f7f6739d9c12a44af84ff895601606b85157e0fb19";
 Similar to RPC Without Burn Protection, but uses BCHD's gRPC instead of JSON RPC
 
 ```ts
-/***************************************************************************************
- *
- *  Example 4: Validate a specific txid using BCHD gRPC.
- *
- *  Instructions:
- *      (1) - Set bitcoind RPC user, password, and URL.
- *      (2) - Optional: set custom txid.
- *
- * ************************************************************************************/
+// Set bitcoind RPC user, password, and URL.
+// Optional: set custom txid.
 
 import { GrpcClient } from "grpc-bchrpc-node";
 import { ValidatorType1 } from "../lib/index";
@@ -211,15 +181,7 @@ const txid = "cecf484fa8b65b938131392e8e0e0a83a939c83d2e3f6673e28349ad5cc74244";
 Validate more quickly by downloading transactions in bulk from SLP graph search instead of downloading transactions individually via RPC
 
 ```ts
-
-/***************************************************************************************
- *
- *  Example 5: Validate using gs++ server.
- *
- *  Instructions:
- *      (1) - Set "txid" and "excludeList"
- *
- * ************************************************************************************/
+// Set "txid" and "excludeList"
 
 import { GraphSearchClient } from "grpc-graphsearch-node";
 import { Crypto, ValidatorType1 } from "../lib/index";
