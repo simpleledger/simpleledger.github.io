@@ -66,6 +66,7 @@ module.exports = {
     ],
     sidebar: [
       ['/get-started', 'Get Started'],
+      ['/terminology', 'Terminology'],
       {
         title: 'Specifications',
         children: [
