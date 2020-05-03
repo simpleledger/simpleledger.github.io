@@ -7,7 +7,7 @@ description: The home page for developer documentation for SLP, the Simple Ledge
 
 <p style="font-size:1.65rem; font-weight: 200; line-height: 2rem; margin-top: -15px;">Learn to develop on top of the simplest, fastest, and most liberating token system in existence. SLP tokens can easily be created, traded, and managed on the Bitcoin Cash blockchain within seconds; costing the user only fractions of a penny for each transaction.</p>
 
-<p>Check out some of the most popular content in these docs below — or explore the main site menu to learn about <a href="/get-started/">SLP</a>, try our <a href="/guides/">how-to guides</a>, browse available <a href="/packages/">software packages</a>, or access the freely available <a href="/tooling/">tooling</a> and get hacking.</p>
+<p>Check out some of the most popular content in these docs below — or explore the main site menu to learn about <a href="/get-started/">SLP</a>, try our <a href="/guides/">how-to guides</a>, browse available <a href="/packages/overview">software packages</a>, or access the freely available <a href="/tooling/overview">tooling</a> and get hacking.</p>
 
 ## Create your first token
 

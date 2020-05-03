@@ -86,6 +86,7 @@ module.exports = {
       {
         title: 'Packages',
         children: [
+          ['/packages/overview', 'Overview'],
           ['/packages/slpjs', 'SLPJS'],
           ['/packages/slp-validate', 'SLP-Validate'],
           ['/packages/slp-list', 'SLP-List'],
@@ -109,6 +110,7 @@ module.exports = {
       {
         title: 'Tooling',
         children: [
+          ['/tooling/overview', 'Overview'],
           ['/tooling/explorer', 'Explorer'],
           {
             title: 'SLPDB',
@@ -130,6 +132,11 @@ module.exports = {
             title: 'Wallets',
             children: [
               ['/tooling/ecslp', 'Electron Cash SLP'],
+              ['/tooling/badger', 'Badger'],
+              ['/tooling/crescentcash', 'Crescent Cash'],
+              ['/tooling/bitcoincomwallet', 'Bitcoin.com Wallet'],
+              ['/tooling/monarch', 'Monarch'],
+              ['/tooling/zapit', 'Zapit'],
             ]
           }
         ]
