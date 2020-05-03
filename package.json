@@ -10,6 +10,7 @@
     "vuepress-plugin-check-md": "0.0.2",
     "vuepress-plugin-clean-urls": "^1.1.1",
     "vuepress-plugin-matomo": "^1.0.2",
-    "vuepress-plugin-seo": "^0.1.2"
+    "vuepress-plugin-seo": "^0.1.2",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

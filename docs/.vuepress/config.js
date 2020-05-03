@@ -221,5 +221,10 @@ module.exports = {
       }
     ],
     'check-md',
+    [
+      'sitemap', {
+        hostname: 'https://slp.dev',
+      }
+    ],
   ]
 };
