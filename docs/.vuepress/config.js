@@ -126,8 +126,13 @@ module.exports = {
           {
             title: 'GS++',
             children: [
-              ['/tooling/gs++', 'GS++'],
+              ['/tooling/gs++', 'gs++'],
+              ['/tooling/gs++-cli', 'gs++-cli'],
               ['/tooling/slpstream', 'SLPStream'],
+              ['/tooling/txdecoder', 'txdecoder'],
+              ['/tooling/slpdecoder', 'slpdecoder'],
+              ['/tooling/blockdecoder', 'blockdecoder'],
+              ['/tooling/fuzz', 'fuzz'],
             ]
           },
           {
