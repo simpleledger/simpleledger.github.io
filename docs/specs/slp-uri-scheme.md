@@ -132,7 +132,9 @@ This should be UTF-8 and the message should be shown in a textbox for the user t
 ## Reference Implementations
 
 ### Clients
-Electron Cash SLP - WIP
+
+* Electron Cash SLP
+* Badger
 
 ### Libraries
-None currently
+* SLPJS [Utils.parseSlpUri()](https://github.com/simpleledger/slpjs/blob/master/lib/utils.ts#L166)
