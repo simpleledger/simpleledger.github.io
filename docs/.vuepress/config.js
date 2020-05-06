@@ -58,7 +58,7 @@ module.exports = {
     docsBranch: 'develop',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
-    logo: '/logo.png',
+    logo: '/slp-documentation-logo.svg',
     defaultImage: '/logo.png',
     smoothScroll: true,
 
