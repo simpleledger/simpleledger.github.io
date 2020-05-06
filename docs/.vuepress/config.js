@@ -83,6 +83,7 @@ module.exports = {
         children: [
           ['/guides/overview', 'Overview'],
           ['/guides/slp-implementation-instructions', 'Implementation Instructions'],
+          ['/guides/create-slp-faucet', 'Create your own SLP Faucet'],
         ]
       },
       {

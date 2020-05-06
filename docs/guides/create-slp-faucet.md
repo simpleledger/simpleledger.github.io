@@ -1,4 +1,4 @@
-# Guide to create your own SLP Faucet
+# Create your own SLP Faucet
 
 Anyone can create their own SLP token on the Bitcoin Cash blockchain using an SLP wallet or Memo.cash but how can you distribute all your tokens? One way is to set up an SLP Faucet specifically for your token. In order to do this, you’ll need a few things:
 
@@ -7,7 +7,7 @@ Anyone can create their own SLP token on the Bitcoin Cash blockchain using an SL
 3. Minor unix/linux skills to install dependencies, server management & configure a proxy server.
 4. Server hosting that supports Node.js v9+, Express, and SLPJS. I use a Vultr VPS, Ubuntu 16.04 x64 that is $5/mo. The $3.50/mo VPS plan should also work.
 
-![SOUR SLP Faucet](/sour-faucet.png "SOUR SLP Faucet")*The SOUR SLP Faucet is a fork of Simple Ledger’s SLP Faucet GitHub repository that has been modified.*
+![SOUR SLP Faucet](./images/sour-faucet.png "SOUR SLP Faucet")*The SOUR SLP Faucet is a fork of Simple Ledger’s SLP Faucet GitHub repository that has been modified.*
 
 ## SLP Faucet Code & Installation
 
@@ -33,21 +33,20 @@ The basic outline of the SLP Faucet repository is:
 
 Once you have forked the repository, clone the new repository to your computer or server:
 
-```
-(copy files from repository to your computer)
+```bash
+# copy files from repository to your computer
 git clone https://github.com/username/slp-faucet.git
 
-
-(after making changes, stage them for commit & push back to repo)
+# after making changes, stage them for commit & push back to repo
 git add * 
 git commit -m 'commit message'
 git push
 ```
 
-The only requirement to test it is to build & install dependencies, set up your wallet & create a .env file with the mnemonic, tokenid, tokenqty, distribute_secret & port – as described on the README for the repository.
+The only requirement to test it is to build & install dependencies, set up your wallet & create a .env file with the `mnemonic`, `tokenid`, `tokenqty`, `distribute_secret` & `port` – as described on the README for the repository.
 
 Example .env file:
-```
+```ini
 MNEMONIC=these words are your mnemonic do not check this into gitlab repo
 TOKENID=6448381f9649ecacd8c30189cfbfee71a91b6b9738ea494fe33f8b8b51cbfca0
 TOKENQTY=2100000000
@@ -87,31 +86,22 @@ I use a Vultr VPS, Ubuntu 16.04 x64 with all dependencies being manually install
 
 You’ll need to install a number of things on your server now – apache2 webserver, pm2 server manager & node.js. The remaining dependencies will be installed via NPM.
 
-```
+```bash
 apt-get update
-
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-
-sudo apt-get install -y nodejs
-
+apt-get install -y nodejs
 apt-get install apache2
-
 npm install pm2 -g
 ```
 
 If you have any issues installing a specific module, just research the commands above & the error. After you get those installed, run the below commands to copy your files to the server from your github account. You will want to push any changes you made to your forked Github repository so that you can access them from your VPS.
 
-```
+```bash
 cd /var/www/html/
-
 git clone URLtogithubforkrepo
-
 cd slp-faucet/
-
 npm install
-
 npm install -g typescript
-
 tsc
 ```
 
@@ -133,15 +123,17 @@ If you want your application to have a domain name (www.domain-name.com), you wi
 ## Setting up an apache2 proxy server
 
 Next, you’ll need to edit your apache configurations to point to your node.js application/port when a user hits your IP/DNS over port 80.
-```
-cd /etc/apache2/sites-enabled/ 
 
+```bash
+cd /etc/apache2/sites-enabled/ 
 vi 000-default.conf
 ```
 
 This will allow you to edit the apache conf file for your application. Within the <VirtualHost *:80> tag, you’ll need to add the below text. Update the serverName & serverAlias with your custom DNS URL. Update the ProxyPass & ProxyPassReverse with your Port # that you include in the .env file.
-```
-<VirtualHost *:80> (already here, don't add or change this)
+
+```apacheconf
+# already here, don't add or change this
+<VirtualHost *:80>
 
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/html
@@ -164,18 +156,19 @@ When you’re finished, save the file using:
 
 Now, you can start & manage your server.js app using pm2 server manager.
 
-If you’re in the /var/www/html/slp-faucet/ directory, you can just run:
-```
+If you’re in the `/var/www/html/slp-faucet/` directory, you can just run:
+
+```bash
 pm2 start server.js --name my-app # Name process
 
-Otherwise, use:
+# Otherwise, use:
 pm2 start /var/www/html/slp-faucet/server.js
 
-After that, you can use:
+# After that, you can use:
 pm2 restart my-app
 ```
 
-Troubleshoot any errors you get and go from there. Using `pm2 show app-name` will give you the path to all your server logs (server-out.log and server-error.log) if you want to check them to troubleshoot. If all works well, you should be able to visit your DNS URL that you set up and be directed to your node.js application. An example is the SOUR SLP Faucet at [http://sour-faucet.ddns.net]: http://sour-faucet.ddns.net
+Troubleshoot any errors you get and go from there. Using `pm2 show app-name` will give you the path to all your server logs (server-out.log and server-error.log) if you want to check them to troubleshoot. If all works well, you should be able to visit your DNS URL that you set up and be directed to your node.js application. An example is the SOUR SLP Faucet at [http://sour-faucet.ddns.net](http://sour-faucet.ddns.net)
 
 As long as you have BCH & Tokens in your faucet, it should work without any issues. If the faucet does run out of BCH, just send more to the first BCH address (index 0, the next one or two may also work) and then restart the server: `pm2 restart app-name` Any update to your index.ejs file will automatically be applied without a restart. Any updates to the .env file requires a restart & updates to .ts files requires a rebuild (tsc) then a restart:
 
