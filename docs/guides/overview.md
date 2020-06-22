@@ -10,4 +10,4 @@ Contains information on best practices and things to avoid if you are integratin
 
 By the end of this guide you will have a SLP faucet set up on your own web server. 
 
-[View →](/guides/slp-implementation-instructions/)
+[View →](/guides/create-slp-faucet/)
