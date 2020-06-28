@@ -47,7 +47,7 @@ If you'd rather try things on testnet, you'll find a small comment after each se
 
 #### GUI
 
-[Check out our Electron Cash SLP edition walkthrough](https://www.google.com) (WIP)
+[Check out our Electron Cash SLP edition walkthrough](/guides/slp-software-setup) **(Coming soon)**
 
 #### CLI
 
@@ -364,4 +364,4 @@ Try checking the transaction on your favourite SLP explorer, like [simpleledger.
 
 Now that you have completed your first steps in the SLP world, you can start imagining what your future project will look like.
 
-In the next tutorial, we will learn about... (WIP)
+**Our next tutorials are right around the corner. Check back soon!**
