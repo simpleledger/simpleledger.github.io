@@ -41,6 +41,7 @@ Before moving on with the scripting, you’ll need some SLP addresses of your ow
 
 First off, let’s get you an SLP compatible wallet. This will be the place where your freshly minted SLP tokens will reside, and also where you’ll have to send the required BCH to do so. After installing the software, we will make sure to keep the SLP address and it’s WIF.
 
+If you'd rather try things on testnet, you'll find a small comment after each section indicating the changes needed. To get testnet coins you can find several services, like the [bitcoin.com Testnet BCH faucet](https://developer.bitcoin.com/faucets/bch/).
 
 ### Option 1: Electron Cash SLP
 
@@ -116,6 +117,11 @@ After this, we will have generated the three necessary bits of information we ne
 `bitcoincash:qzvjfs5tuw56est4mwtzw3fegucgdwr00vrgaayqsf`
 
 
+> **TESTNET**    
+> For the testnet version, just add the flag `--testnet` in each query
+
+
+
 ### Option 2: bitcore
 
 Bitcore is a library used by SLPJS which, aside from many other things, allows us to create and manage new addresses using many different methods, like seed based, WIF based, or without any arguments at all.
@@ -160,6 +166,13 @@ Now to obtain the **recieving SLP address** we can use multiple different method
 
 **Recieving SLP address**    
 `simpleledger:qp8x5ppmu4d0h2g2mgu405jkp5r4x87h7ygx3w7fny`
+
+> **TESTNET**    
+> For the testnet version, just add the following as the second line in the `bitcoreAddr.js` file    
+> ```javascript
+> bitcore.Networks.defaultNetwork = bitcore.Networks.testnet;
+> ````
+
 
 ## Scripts
 
@@ -286,6 +299,10 @@ let balances;
 Here you’ll want to make sure to change the `fundingAddress`, `fundingWif`, `tokenReceiverAddress`, `bchChangeReceiverAddress` and `batonReceiverAddress` in the script to the ones you obtained in the previous steps. Also, remember to send a small amount of BCH to the funding address using the cashAddr format. Some cents will be enough.
 
 Also, here you can edit the parameters of the new token. Feel free to change the `decimals`, `name`, `ticker`, `documentUri`, `documentHash` and `initialTokenQty` to match the desired specifications of your token. Or just leave the defaults for testing purposes.
+
+
+> **TESTNET**    
+> For the testnet version, both scripts include `MAINNET` and `TESTNET` blocks you can comment/uncomment
 
 ## Run
 
