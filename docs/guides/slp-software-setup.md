@@ -41,7 +41,7 @@ Before moving on with the scripting, you’ll need some SLP addresses of your ow
 
 First off, let’s get you an SLP compatible wallet. This will be the place where your freshly minted SLP tokens will reside, and also where you’ll have to send the required BCH to do so. After installing the software, we will make sure to keep the SLP address and it’s WIF.
 
-If you'd rather try things on testnet, you'll find a small comment after each section indicating the changes needed. To get testnet coins you can find several services, like the [bitcoin.com Testnet BCH faucet](https://developer.bitcoin.com/faucets/bch/).
+If you'd rather try things on testnet, you'll find a small comment after each section indicating the changes needed. To get testnet coins you can find several services, like the [bitcoin.com Testnet BCH faucet](https://developer.bitcoin.com/faucets/bch/) or the [Fullstack.cash Testnet BCH faucet](https://faucet.fullstack.cash/).
 
 ### Option 1: Electron Cash SLP
 
@@ -110,15 +110,15 @@ After this, we will have generated the three necessary bits of information we ne
 **The WIF (private key)**    
 `L1aeBNDeQ43PtFN2Jc9tbeqhNiqBgDHbxMctefHftHw4WtSo621e`
 
-**The recieving SLP address, make sure to add the prefix ‘simpleledger:’**    
+**The receiving SLP address**    
 `simpleledger:qzvjfs5tuw56est4mwtzw3fegucgdwr00v0nkx3qwh`
 
 **And the funding cashaddr format address:**    
 `bitcoincash:qzvjfs5tuw56est4mwtzw3fegucgdwr00vrgaayqsf`
 
 
-> **TESTNET**    
-> For the testnet version, just add the flag `--testnet` in each query
+>**TESTNET**    
+>For the testnet version, just add the flag `--testnet` in each query
 
 
 
@@ -145,7 +145,7 @@ console.log("cashaddr:", publicKey.toAddress().toString());
 Result
 
 ```bash
-> npm run-script bitcoreAddr
+> npm run bitcoreAddr
 
 > <folder>@1.0.0 bitcoreAddr C:\Users\<user>\<folder>
 > node bitcoreAddr.js
@@ -162,16 +162,16 @@ This will give us:
 **And the funding cashaddr format address:**    
 `bitcoincash:qp8x5ppmu4d0h2g2mgu405jkp5r4x87h7yya64tfd6`
 
-Now to obtain the **recieving SLP address** we can use multiple different methods, like calling the Electron Cash CLI described in the previous section, or using any other resource that performs the conversion, like for example the [bitcoin.com explorer](https://explorer.bitcoin.com/bch) which given a cashaddr format will display the corresponding simpleledger address. In this case:
+Now to obtain the **receiving SLP address** we can use multiple different methods, like calling the Electron Cash CLI described in the previous section, or using any other resource that performs the conversion, like for example the [simpleledger.info explorer](https://simpleledger.info/) or the [bitcoin.com explorer](https://explorer.bitcoin.com/bch) which given a cashaddr format will display the corresponding simpleledger address for SLP. In this case:
 
-**Recieving SLP address**    
+**Receiving SLP address**    
 `simpleledger:qp8x5ppmu4d0h2g2mgu405jkp5r4x87h7ygx3w7fny`
 
-> **TESTNET**    
-> For the testnet version, just add the following as the second line in the `bitcoreAddr.js` file    
-> ```javascript
-> bitcore.Networks.defaultNetwork = bitcore.Networks.testnet;
-> ````
+>**TESTNET**    
+>For the testnet version, just add the following as the second line in the `bitcoreAddr.js` file    
+>```javascript
+>bitcore.Networks.defaultNetwork = bitcore.Networks.testnet;
+>````
 
 
 ## Scripts
@@ -183,7 +183,7 @@ Note that for these examples, we will be using the addresses we created using th
 After running init, you should have a `package.json` file created in the same folder you have run the command. In this file you can find a section called `scripts`. There you can define various scripts you will be able to easily run with commands as follows
 
 ```bash
-> npm run-script <script-name>
+> npm run <script-name>
 ```
 
 For this tutorial we want our scripts section to look like this. You can add more if you need them, for example if you're using the bitcore library to generate your addresses.
@@ -296,25 +296,25 @@ let balances;
 })();
 ```
 
-Here you’ll want to make sure to change the `fundingAddress`, `fundingWif`, `tokenReceiverAddress`, `bchChangeReceiverAddress` and `batonReceiverAddress` in the script to the ones you obtained in the previous steps. Also, remember to send a small amount of BCH to the funding address using the cashAddr format. Some cents will be enough.
+Here you’ll want to make sure to change the `fundingAddress`, `fundingWif`, `tokenReceiverAddress`, `bchChangeReceiverAddress` and `batonReceiverAddress` in the script to the ones you obtained in the previous steps. Also, remember to send a small amount of BCH to the funding address. Keep in mind that if you choose to send the funds using a non-SLP compatible wallet, you'll need to use the cashAddr format address. Some cents will be enough.
 
 Also, here you can edit the parameters of the new token. Feel free to change the `decimals`, `name`, `ticker`, `documentUri`, `documentHash` and `initialTokenQty` to match the desired specifications of your token. Or just leave the defaults for testing purposes.
 
 
-> **TESTNET**    
-> For the testnet version, both scripts include `MAINNET` and `TESTNET` blocks you can comment/uncomment
+>**TESTNET**    
+>For the testnet version, both scripts include `MAINNET` and `TESTNET` blocks you can comment/uncomment
 
 ## Run
 
 Now we are ready to finally test our scripts. Lets begin with balance
 
 ```bash
-> npm run-script balance
+> npm run balance
 ```
 
 This will return all the balances and UTXOs associated with the address provided in the script
 
-```bash
+```js
 balances:  {
   satoshis_available_bch: 86546,
   satoshis_in_slp_baton: 0,
@@ -353,8 +353,11 @@ The most relevant bit of information at the moment is the `satoshis_available_bc
 Now let’s go ahead and run genesis
 
 ```bash
-> npm run-script genesis
+> npm run genesis
+```
+Which returns
 
+```js
 'balances' variable is set.
 BCH balance: 86546
 GENESIS txn complete: a17054f4cdb99fca43ad8ae218fd55c53814c02c450fb540a263edab5f1ac527
