@@ -17,7 +17,7 @@ Live status of nodes running slpdb can be found at: [https://status.slpdb.io](ht
 
 
 
-## Do you need to <u>install</u> SLPDB?
+## Do you need to install SLPDB?
 
 Most likely you do <u>not</u> need to install SLPDB.  Most users will be better off using someone else's publicly shared SLPDB instance like [https://slpdb.fountainhead.cash](https://slpdb.fountainhead.cash) or [https://slpdb.bitcoin.com](https://slpdb.bitcoin.com).  You only need to install SLPDB, SlpServe, and/or SlpSockServe if any of the following is true:
 
