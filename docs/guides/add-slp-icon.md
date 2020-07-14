@@ -36,9 +36,7 @@ At this point, you have your token icons in your own forked repository, under th
 Go back to the [original repo](https://github.com/kosinusbch/slp-token-icons) and click “New pull request”. From the Compare Changes page, select your repository & changes to merge into the original one.
 The pull request will need to be reviewed & approved so it can take a few days or couple weeks, depending on the dev(s) maintaining the repo.
 
-For the Badger wallet & Bitcoin.com explorer (and possibly Bitcoin.com wallet), you will need to go through the same process for the following repository: 
-[https://github.com/Bitcoin-com/bch-token-icons](https://github.com/Bitcoin-com/bch-token-icons)
-
+For Bitcoin.com services you can use [mint.bitcoin.com](https://mint.bitcoin.com/) to upload an icon.
 
 You can get more help on the SLP Devs telegram group: [https://t.me/slp_devs_for_hire](https://t.me/slp_devs_for_hire)
 

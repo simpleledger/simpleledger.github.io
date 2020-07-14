@@ -44,7 +44,7 @@ NOTES:
 
 ### Get Balances
 
-Get all balances for a given example.  See also the [TypeScript example](examples/1-get-token-balances.ts).
+Get all balances for a given example.  See also the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/1-get-token-balances-local.ts).
 
 ```js
 // Install BITBOX-SDK v8.1+ for blockchain access
@@ -106,9 +106,9 @@ let balances;
 ### GENESIS - Create a new token
 
 GENESIS is the most simple type of SLP transaction since no special inputs are required.  The following example shows how to create a fungible token.  Also see the TypeScript examples for: 
-* [Type 1 Genesis](examples/3-genesis-token-type-1.ts).
-* [NFT1 Parent Genesis](examples/4-genesis-token-type-NFT1-parent.ts).
-* [NFT1 Child Genesis](examples/5-genesis-token-type-NFT1-child.ts).
+* [Type 1 Genesis](https://github.com/simpleledger/slpjs/blob/master/examples/3-genesis-token-type-1.ts).
+* [NFT1 Parent Genesis](https://github.com/simpleledger/slpjs/blob/master/examples/4-genesis-token-type-NFT1-parent.ts).
+* [NFT1 Child Genesis](https://github.com/simpleledger/slpjs/blob/master/examples/5-genesis-token-type-NFT1-child.ts).
 
 ```js
 // Install BITBOX-SDK v8.1+ for blockchain access
@@ -183,7 +183,7 @@ let genesisTxid;
 
 ### MINT - Create additional tokens
 
-Adding additional tokens for a token that already exists is possible if you are in control of the minting "baton".  This minting baton is a special UTXO that gives authority to add to the token's circulating supply.  Also see the [TypeScript example](examples/6-mint-token.ts).
+Adding additional tokens for a token that already exists is possible if you are in control of the minting "baton".  This minting baton is a special UTXO that gives authority to add to the token's circulating supply.  Also see the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/6-mint-token.ts).
 
 ```javascript
 // Install BITBOX-SDK v8.1+ for blockchain access
@@ -268,7 +268,7 @@ let mintTxid;
 
 ### SEND - Send tokens
 
-This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](examples/7-send-token-p2pkh.ts).
+This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/7-send-token-p2pkh.ts).
 
 ```js
 // Install BITBOX-SDK v8.1+ for blockchain access
@@ -411,7 +411,7 @@ let sendTxId;
 
 ### SEND - Send tokens from a frozen address
 
-This example shows how to freeze funds until a future time using OP_CLTV.  Also see the [TypeScript example](examples/8-send-token-p2sh-frozen.ts).  First, the address is calculated based on a user-defined public key and locktime. After the locktime has elapsed the user can proceed to spend those funds as demonstrated in this example:
+This example shows how to freeze funds until a future time using OP_CLTV.  Also see the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/8-send-token-p2sh-frozen.ts).  First, the address is calculated based on a user-defined public key and locktime. After the locktime has elapsed the user can proceed to spend those funds as demonstrated in this example:
 
 redeemScript (locking script) = `<locktime> OP_CHECKLOCKTIMEVERIFY OP_DROP <pubkey> OP_CHECKSIG`
 
@@ -529,7 +529,7 @@ let sendTxid;
 
 ### SEND - Send tokens from 2-of-2 multisig (P2SH)
 
-This example shows the general workflow for sending tokens from a P2SH multisig address.  Also see the [TypeScript example](examples/9-send-token-p2sh-multisig.ts).  Electron Cash SLP edition [3.4.13](https://simpleledger.cash/project/electron-cash-slp-edition/) is compatible with signing the partially signed transactions generated from this example by using the `insert_input_values_for_EC_signers` helper method.
+This example shows the general workflow for sending tokens from a P2SH multisig address.  Also see the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/9-send-token-p2sh-multisig.ts).  Electron Cash SLP edition [3.4.13](https://simpleledger.cash/project/electron-cash-slp-edition/) is compatible with signing the partially signed transactions generated from this example by using the `insert_input_values_for_EC_signers` helper method.
 
 ```js
 // Install BITBOX-SDK v8.1+ for blockchain access
@@ -628,7 +628,7 @@ let sendTxid;
 
 ### BURN - Destroy tokens for a certain Token Id
 
-This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](examples/10-burn-token.ts).
+This example shows the general workflow for sending an existing token.  Also see the [TypeScript example](https://github.com/simpleledger/slpjs/blob/master/examples/10-burn-token.ts).
 
 ```javascript
 
