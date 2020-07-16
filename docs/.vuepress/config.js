@@ -86,6 +86,7 @@ module.exports = {
           ['/guides/create-slp-faucet', 'Create your own SLP Faucet'],
           ['/guides/add-slp-icon', 'Add an icon for your SLP Token'],
           ['/guides/slp-software-setup', 'SLP software setup'],
+	  ['/guides/how-to-use-explorer', 'How to use SLP Explorer'],
     ]
       },
       {
