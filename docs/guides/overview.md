@@ -18,4 +18,14 @@ By the end of this guide, you'll have the basic set of tools to be able to devel
 
 [View →](/guides/slp-software-setup/)
 
+## Add an icon for your SLP token
 
+By the end of this guide, you'll have the knowledge to add your custom token icon to the git repository which serves SLP explorers and some wallets.
+
+[View →](/guides/add-slp-icon/)
+
+## How to use SLP Explorer
+
+By the end of this guide, you'll have a basic understanding of how to use the SLP explorer for debugging SLP addresses, transactions, and tokens.
+
+[View →](/guides/how-to-use-explorer/)
