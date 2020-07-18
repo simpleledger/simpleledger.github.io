@@ -87,6 +87,7 @@ module.exports = {
           ['/guides/add-slp-icon', 'Add an icon for your SLP Token'],
           ['/guides/slp-software-setup', 'SLP software setup'],
           ['/guides/SLPDB-usage', 'SLPDB usage'],
+          ['/guides/how-to-use-explorer', 'How to use SLP Explorer'],
     ]
       },
       {
