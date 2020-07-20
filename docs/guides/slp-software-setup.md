@@ -39,9 +39,11 @@ Make sure everything is installed without errors.
 ## SLP wallet
 Before moving on with the scripting, you’ll need some SLP addresses of your own to work with. If you already have some, feel free to skip these steps.
 
-First off, let’s get you an SLP compatible wallet. This will be the place where your freshly minted SLP tokens will reside, and also where you’ll have to send the required BCH to do so. After installing the software, we will make sure to keep the SLP address and it’s WIF.
+First off, let’s get you an SLP compatible wallet. This will be the place where your freshly minted SLP tokens will reside, and also where you’ll have to send the required BCH to do so. 
+After installing the software, we will make sure to keep the SLP address and it’s WIF.
 
-If you'd rather try things on testnet, you'll find a small comment after each section indicating the changes needed. To get testnet coins you can find several services, like the [bitcoin.com Testnet BCH faucet](https://developer.bitcoin.com/faucets/bch/) or the [Fullstack.cash Testnet BCH faucet](https://faucet.fullstack.cash/).
+If you'd rather try things on testnet, you'll find a small comment after each section indicating the changes needed. To get testnet coins you can find several services, like 
+the [bitcoin.com Testnet BCH faucet](https://developer.bitcoin.com/faucets/bch/) or the [Fullstack.cash Testnet BCH faucet](https://faucet.fullstack.cash/).
 
 ### Option 1: Electron Cash SLP
 
@@ -162,7 +164,9 @@ This will give us:
 **And the funding cashaddr format address:**    
 `bitcoincash:qp8x5ppmu4d0h2g2mgu405jkp5r4x87h7yya64tfd6`
 
-Now to obtain the **receiving SLP address** we can use multiple different methods, like calling the Electron Cash CLI described in the previous section, or using any other resource that performs the conversion, like for example the [simpleledger.info explorer](https://simpleledger.info/) or the [bitcoin.com explorer](https://explorer.bitcoin.com/bch) which given a cashaddr format will display the corresponding simpleledger address for SLP. In this case:
+Now to obtain the **receiving SLP address** we can use multiple different methods, like calling the Electron Cash CLI described in the previous section, or using any other resource that performs the conversion, 
+like for example the [simpleledger.info explorer](https://simpleledger.info/) or the [bitcoin.com explorer](https://explorer.bitcoin.com/bch) which given a cashaddr format will display the corresponding 
+simpleledger address for SLP. In this case:
 
 **Receiving SLP address**    
 `simpleledger:qp8x5ppmu4d0h2g2mgu405jkp5r4x87h7ygx3w7fny`
@@ -180,7 +184,8 @@ Now that everything is set up, and we have all the information we need, we can t
 
 Note that for these examples, we will be using the addresses we created using the Electron Cash SLP method.
 
-After running init, you should have a `package.json` file created in the same folder you have run the command. In this file you can find a section called `scripts`. There you can define various scripts you will be able to easily run with commands as follows
+After running init, you should have a `package.json` file created in the same folder you have run the command. In this file you can find a section called `scripts`. There you can define various scripts you 
+will be able to easily run with commands as follows
 
 ```bash
 > npm run <script-name>
@@ -296,9 +301,12 @@ let balances;
 })();
 ```
 
-Here you’ll want to make sure to change the `fundingAddress`, `fundingWif`, `tokenReceiverAddress`, `bchChangeReceiverAddress` and `batonReceiverAddress` in the script to the ones you obtained in the previous steps. Also, remember to send a small amount of BCH to the funding address. Keep in mind that if you choose to send the funds using a non-SLP compatible wallet, you'll need to use the cashAddr format address. Some cents will be enough.
+Here you’ll want to make sure to change the `fundingAddress`, `fundingWif`, `tokenReceiverAddress`, `bchChangeReceiverAddress` and `batonReceiverAddress` in the script to the ones you obtained 
+in the previous steps. Also, remember to send a small amount of BCH to the funding address. Keep in mind that if you choose to send the funds using a non-SLP compatible wallet, you'll need to 
+use the cashAddr format address. Some cents will be enough.
 
-Also, here you can edit the parameters of the new token. Feel free to change the `decimals`, `name`, `ticker`, `documentUri`, `documentHash` and `initialTokenQty` to match the desired specifications of your token. Or just leave the defaults for testing purposes.
+Also, here you can edit the parameters of the new token. Feel free to change the `decimals`, `name`, `ticker`, `documentUri`, `documentHash` and `initialTokenQty` to match the desired specifications 
+of your token. Or just leave the defaults for testing purposes.
 
 
 >**TESTNET**    
@@ -366,5 +374,3 @@ GENESIS txn complete: a17054f4cdb99fca43ad8ae218fd55c53814c02c450fb540a263edab5f
 Try checking the transaction on your favourite SLP explorer, like [simpleledger.info](https://simpleledger.info/), and you’ll find the info on your newly minted token. Plus the tokens will be waiting for you in your SLP wallet.
 
 Now that you have completed your first steps in the SLP world, you can start imagining what your future project will look like.
-
-**Our next tutorials are right around the corner. Check back soon!**
