@@ -14,13 +14,13 @@ When your token is created (either on Memo or Electron Cash SLP), it will be ass
 - The format is /{size}/{txid}.{format}  
 {size} can be any number from 1-2399 (or “original”)  
 {txid} is the transaction id of the token genesis transaction  
-{format} can be png, jpg, tiff or webp  
+{format} must be png  
 
 ![SLP Token Icon folders](./images/slp-token-folders.png "SLP Token Icon folders")*https://github.com/kosinusbch/slp-token-icons*
 
 `cd slp-token-icons`
 
-`cp TOKENID.jpg path/{size}/{txid}(tokenID).jpg/png/tiff/webp`
+`cp TOKENID.png path/{size}/{txid}(tokenID).png
 
 Repeat cp for each size of token icon.
 
