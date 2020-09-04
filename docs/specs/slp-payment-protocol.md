@@ -77,8 +77,9 @@ A web server generating a PaymentRequest message to initiate the payment protoco
 ## Reference Implementations
 
 ### Clients
-[Badger Extension](https://github.com/bitcoin-com/badger)
-[Badger Mobile](https://github.com/bitcoin-com/badger-mobile)
+* [Electron Cash SLP](https://github.com/simpleledger/Electron-Cash-SLP)
+* [Badger Extension](https://github.com/bitcoin-com/badger)
+* [Badger Mobile](https://github.com/bitcoin-com/badger-mobile)
 
 ### Libraries
 None currently
