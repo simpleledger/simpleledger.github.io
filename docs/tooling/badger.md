@@ -4,8 +4,8 @@
 [https://github.com/Bitcoin-com/badger](https://github.com/Bitcoin-com/badger)
 :::
 
-::: warning
-Badger is currently without regular development, and only critical issues will be able to be fixed.
+::: danger
+Badger is abandoned and may have serious bugs
 :::
 
 
