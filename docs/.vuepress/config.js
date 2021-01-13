@@ -141,18 +141,26 @@ module.exports = {
               ['/tooling/fuzz', 'fuzz'],
             ]
           },
-          ['/tooling/slp-indexer', 'Bitcoin.com SLP Indexer'],
           {
             title: 'Wallets',
             children: [
               ['/tooling/wallets', 'Overview'],
               ['/tooling/ecslp', 'Electron Cash SLP'],
-              ['/tooling/badger', 'Badger'],
-              ['/tooling/mint', 'Mint'],
               ['/tooling/pokket', 'Pokket'],
               ['/tooling/bitcoincomwallet', 'Bitcoin.com Wallet'],
               ['/tooling/monarch', 'Monarch'],
               ['/tooling/zapit', 'Zapit'],
+            ]
+          },
+          {
+            title: 'Defunct / Broken',
+            children: [
+              ['/tooling/rest', 'rest.bitcoin.com'],
+              ['/tooling/slp-indexer', 'Bitcoin.com SLP Indexer'],
+              ['/tooling/bitbox', 'BITBOX'],
+              ['/tooling/badger', 'Badger'],
+              ['/tooling/badger-sdk', 'Badger SDK'],
+              ['/tooling/mint', 'mint.bitcoin.com'],
             ]
           }
         ]
