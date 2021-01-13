@@ -1,4 +1,8 @@
-# Mint
+# Bitcoin.com Mint
+
+::: danger
+Bitcoin.com Mint is abandoned and may have serious bugs
+:::
 
 ::: tip View Repo:
 [https://github.com/Bitcoin-com/mint](https://github.com/Bitcoin-com/mint)
