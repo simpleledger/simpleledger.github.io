@@ -142,6 +142,13 @@ module.exports = {
             ]
           },
           {
+            title: 'BCHD',
+            children: [
+              ['/tooling/bchd', 'bchd'],
+              ['/tooling/meep', 'meep'],
+            ]
+          },
+          {
             title: 'Wallets',
             children: [
               ['/tooling/wallets', 'Overview'],
