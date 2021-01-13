@@ -24,11 +24,11 @@ GS++ is a high performance validator, indexer, and graph search server. This all
 
 [View →](/tooling/gs++)
 
-## Bitcoin.com SLP-Indexer
+## BCHD
 
-SLP-Indexer is a service that listens to the Bitcoin Cash blockchain for SLP-token transactions. When it finds an SLP transaction it will parse, validate and save it in the database for easy and fast access
+BCHD is an alternative full node bitcoin cash implementation written in Go (golang) that allows for easy querying of the blockchain. It may be used as an alternative to rest.bitcoin.com.
 
-[View →](/tooling/slp-indexer)
+[View →](/tooling/bchd)
 
 ## Wallets
 
