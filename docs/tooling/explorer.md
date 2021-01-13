@@ -28,6 +28,19 @@ The reasoning for this is such: imagine there is a token called MONEY which is w
 
 Kosinus maintains an open-source token icon repository [here](https://github.com/kosinusbch/slp-token-icons) - if you want your logo on the explorer please open a Pull Request here.
 
+## Custom NFT Icon Repository
+
+The explorer has functionality to use a custom token icon server for all child NFTs of a specific group. If you are building an application which would like to use this, simply provide an api that responds correctly to these routes:
+
+```
+/32/{tokenid}.png
+/64/{tokenid}.png
+/128/{tokenid}.png
+/original/{tokenid}.png
+```
+
+Submit a PR once it is working, with reasonable caching and optimization of the images. If you are a wallet developer who is interested in showing icons from custom icon repositories, you may reference/link to [group_icon_repos.json](https://simpleledger.info/group_icon_repos.json).
+
 ## Dividend Helper
 
 SLP-Explorer contains a simple dividend calculator tool [here](https://simpleledger.info/#dividend) which allows you to use the explorer to calculate token ownership. For more serious applications, consider using [SLP-List](/packages/slp-list).
