@@ -6,7 +6,7 @@
 
 This project is an example of an SLP faucet website.
 
-[[ toc ]]
+[[toc]]
 
 ## Faucet Capacity
 

@@ -4,9 +4,9 @@
 [https://github.com/simpleledger/slp-post-office-server](https://github.com/simpleledger/slp-post-office-server)
 :::
 
-An implementation of the [/specs/slp-postage-protocol/](Simple Ledger Postage Protocol)
+An implementation of the [Simple Ledger Postage Protocol](./specs/slp-postage-protocol)
 
-[[ toc ]]
+[[toc]]
 
 ## Introduction
 
