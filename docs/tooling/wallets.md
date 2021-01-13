@@ -10,23 +10,11 @@ Open Source Reference Implementation Wallet
 
 [View →](/tooling/ecslp)
 
-### Badger
+### Zapit
 
-Open Source Web and Mobile Wallet
+Mobile Wallet
 
-[View →](/tooling/badger)
-
-### Mint
-
-Open Source Web Wallet
-
-[View →](/tooling/mint)
-
-### Pokket
-
-Open Source Mobile Wallet
-
-[View →](/tooling/pokket)
+[View →](/tooling/zapit)
 
 ### Bitcoin.com Wallet
 
@@ -34,14 +22,14 @@ Mobile Wallet
 
 [View →](/tooling/bitcoincomwallet)
 
+### Pokket
+
+Open Source Mobile Wallet
+
+[View →](/tooling/pokket)
+
 ### Monarch Wallet
 
 Mobile Wallet
 
 [View →](/tooling/monarch)
-
-### Zapit
-
-Mobile Wallet
-
-[View →](/tooling/zapit)
