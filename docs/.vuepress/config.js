@@ -119,7 +119,13 @@ module.exports = {
         children: [
           ['/tooling/overview', 'Overview'],
           ['/tooling/explorer', 'Explorer'],
-          ['/tooling/slp-unit-test-data', 'Unit Tests'],
+          {
+            title: 'Testing',
+            children: [
+              ['/tooling/slp-unit-test-data', 'Unit Tests'],
+              ['/tooling/fuzz', 'fuzz'],
+            ]
+          },
           {
             title: 'SLPDB',
             children: [
@@ -138,7 +144,6 @@ module.exports = {
               ['/tooling/txdecoder', 'txdecoder'],
               ['/tooling/slpdecoder', 'slpdecoder'],
               ['/tooling/blockdecoder', 'blockdecoder'],
-              ['/tooling/fuzz', 'fuzz'],
             ]
           },
           {
@@ -146,6 +151,13 @@ module.exports = {
             children: [
               ['/tooling/bchd', 'bchd'],
               ['/tooling/meep', 'meep'],
+            ]
+          },
+          {
+            title: 'Servers',
+            children: [
+              ['/tooling/post-office-server', 'Post Office Server'],
+              ['/tooling/faucet', 'SLP Faucet'],
             ]
           },
           {
