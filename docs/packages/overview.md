@@ -28,10 +28,10 @@ bchaddrjs-SLP let's you validate and convert between different address formats i
 
 slp-parser is a low level library for parsing SLP OP_RETURN metadata.
 
-[View →](/packages/slp-parser)
+[View →](/packages/slp-parser.js)
 
 ## slp-metadatamaker
 
 slp-metadatamaker is a low level library for creating SLP OP_RETURN metadata.
 
-[View →](/packages/slp-mdm)
+[View →](/packages/slp-mdm.js)
