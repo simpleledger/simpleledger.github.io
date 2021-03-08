@@ -1,7 +1,7 @@
 # Bitcoin.com Mint
 
 ::: danger
-Bitcoin.com Mint is abandoned and may have serious bugs
+Bitcoin.com Mint is abandoned and has serious bugs (known to burn tokens)
 :::
 
 ::: tip View Repo:
