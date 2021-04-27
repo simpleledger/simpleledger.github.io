@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SLPDB usage</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="/favicon.ico"><link rel='canonical' href='https://slp.dev/guides/SLPDB-usage/'/>
+    <meta name="description" content="">
+    <meta property="article:modified_time" content="2020-07-18T04:11:14.000Z">
+    <meta property="og:title" content="SLPDB usage">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slp.dev/guides/SLPDB-usage/">
+    <meta property="og:image" content="https://slp.dev/logo.png">
+    <meta name="twitter:title" content="SLPDB usage">
+    <meta name="twitter:url" content="https://slp.dev/guides/SLPDB-usage/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://slp.dev/logo.png">
+    <meta name="image" content="https://slp.dev/logo.png">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#5bbad5">
+    
+    <link rel="preload" href="/assets/css/0.styles.a2612fed.css" as="style"><link rel="preload" href="/assets/js/app.727bd0bc.js" as="script"><link rel="preload" href="/assets/js/2.59409279.js" as="script"><link rel="preload" href="/assets/js/6.cb6c63cc.js" as="script"><link rel="preload" href="/assets/js/10.11bd2d6f.js" as="script"><link rel="prefetch" href="/assets/js/11.3448a0e0.js"><link rel="prefetch" href="/assets/js/12.5390e135.js"><link rel="prefetch" href="/assets/js/13.25949c46.js"><link rel="prefetch" href="/assets/js/14.8adf2b39.js"><link rel="prefetch" href="/assets/js/15.f57aebe1.js"><link rel="prefetch" href="/assets/js/16.a9988494.js"><link rel="prefetch" href="/assets/js/17.b632b9c1.js"><link rel="prefetch" href="/assets/js/18.579a7df4.js"><link rel="prefetch" href="/assets/js/19.07b36477.js"><link rel="prefetch" href="/assets/js/20.34496b79.js"><link rel="prefetch" href="/assets/js/21.aa9572ce.js"><link rel="prefetch" href="/assets/js/22.f611c7a9.js"><link rel="prefetch" href="/assets/js/23.fb176ab4.js"><link rel="prefetch" href="/assets/js/24.ae34a08d.js"><link rel="prefetch" href="/assets/js/25.a4764520.js"><link rel="prefetch" href="/assets/js/26.38ce89a0.js"><link rel="prefetch" href="/assets/js/27.b1edb44d.js"><link rel="prefetch" href="/assets/js/28.9dd2f0e6.js"><link rel="prefetch" href="/assets/js/29.b7ec60f2.js"><link rel="prefetch" href="/assets/js/3.8e11cb09.js"><link rel="prefetch" href="/assets/js/30.b3de8cee.js"><link rel="prefetch" href="/assets/js/31.71a279fa.js"><link rel="prefetch" href="/assets/js/32.5bad9125.js"><link rel="prefetch" href="/assets/js/33.29483670.js"><link rel="prefetch" href="/assets/js/34.42841138.js"><link rel="prefetch" href="/assets/js/35.b99d13bf.js"><link rel="prefetch" href="/assets/js/36.3ce31b1a.js"><link rel="prefetch" href="/assets/js/37.c0523623.js"><link rel="prefetch" href="/assets/js/38.f40e6826.js"><link rel="prefetch" href="/assets/js/39.690a7325.js"><link rel="prefetch" href="/assets/js/4.e08ed9f2.js"><link rel="prefetch" href="/assets/js/40.e3acd5f1.js"><link rel="prefetch" href="/assets/js/41.da4e1119.js"><link rel="prefetch" href="/assets/js/42.f9a30f27.js"><link rel="prefetch" href="/assets/js/43.7f8a50cc.js"><link rel="prefetch" href="/assets/js/44.8e978a53.js"><link rel="prefetch" href="/assets/js/45.92a7fe60.js"><link rel="prefetch" href="/assets/js/46.0072c31d.js"><link rel="prefetch" href="/assets/js/47.d0b4a172.js"><link rel="prefetch" href="/assets/js/48.56897b92.js"><link rel="prefetch" href="/assets/js/49.01e5e0b1.js"><link rel="prefetch" href="/assets/js/5.276ce48f.js"><link rel="prefetch" href="/assets/js/50.e5c0199d.js"><link rel="prefetch" href="/assets/js/51.a3b63ce1.js"><link rel="prefetch" href="/assets/js/52.c689335b.js"><link rel="prefetch" href="/assets/js/53.27b0e617.js"><link rel="prefetch" href="/assets/js/54.90baf352.js"><link rel="prefetch" href="/assets/js/55.75e41a49.js"><link rel="prefetch" href="/assets/js/56.0f4c2dcd.js"><link rel="prefetch" href="/assets/js/57.9fa9f121.js"><link rel="prefetch" href="/assets/js/58.278c7677.js"><link rel="prefetch" href="/assets/js/59.e147c217.js"><link rel="prefetch" href="/assets/js/60.21d56b27.js"><link rel="prefetch" href="/assets/js/61.a94ff6cf.js"><link rel="prefetch" href="/assets/js/62.cfc1d4fb.js"><link rel="prefetch" href="/assets/js/63.ecb1ff64.js"><link rel="prefetch" href="/assets/js/64.5f630325.js"><link rel="prefetch" href="/assets/js/65.29333f2d.js"><link rel="prefetch" href="/assets/js/66.07e30d95.js"><link rel="prefetch" href="/assets/js/67.f1a6158d.js"><link rel="prefetch" href="/assets/js/68.e90e7a5e.js"><link rel="prefetch" href="/assets/js/7.0ad4cf60.js"><link rel="prefetch" href="/assets/js/8.3cd91f71.js"><link rel="prefetch" href="/assets/js/9.14c39fac.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a2612fed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/slp-documentation-logo.svg" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/get-started/" class="sidebar-link">Get Started</a></li><li><a href="/terminology/" class="sidebar-link">Terminology</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Specifications</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Guides</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guides/overview/" class="sidebar-link">Overview</a></li><li><a href="/guides/slp-implementation-instructions/" class="sidebar-link">Implementation Instructions</a></li><li><a href="/guides/create-slp-faucet/" class="sidebar-link">Create your own SLP Faucet</a></li><li><a href="/guides/add-slp-icon/" class="sidebar-link">Add an icon for your SLP Token</a></li><li><a href="/guides/slp-software-setup/" class="sidebar-link">SLP software setup</a></li><li><a href="/guides/SLPDB-usage/" aria-current="page" class="active sidebar-link">SLPDB usage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/SLPDB-usage/#getting-started" class="sidebar-link">Getting started</a></li><li class="sidebar-sub-header"><a href="/guides/SLPDB-usage/#execution" class="sidebar-link">Execution</a></li><li class="sidebar-sub-header"><a href="/guides/SLPDB-usage/#examples" class="sidebar-link">Examples</a></li><li class="sidebar-sub-header"><a href="/guides/SLPDB-usage/#more-examples" class="sidebar-link">More examples</a></li></ul></li><li><a href="/guides/how-to-use-explorer/" class="sidebar-link">How to use SLP Explorer</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Packages</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tooling</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/community/" class="sidebar-link">Community</a></li></ul> </aside> <main class="page" data-v-4c735fbc> <div class="theme-default-content content__default" data-v-4c735fbc><h1 id="slpdb-usage"><a href="#slpdb-usage" class="header-anchor">#</a> SLPDB usage</h1> <p>For those of you not already familiar with <a href="/tooling/slpdb">SLPDB</a>, it's purpose is storing all data related to the Simple Ledger Protocol, with real-time transaction and block notifications.</p> <p>As such, it's an invaluable tool whenever looking to build services that require reliable data on SLP specifics without needing to transverse the blockchain ourselves.</p> <h2 id="getting-started"><a href="#getting-started" class="header-anchor">#</a> Getting started</h2> <p>There are several SLPDB instances available for the public to query, like <a href="https://slpdb.fountainhead.cash" target="_blank" rel="noopener noreferrer">https://slpdb.fountainhead.cash<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> or <a href="https://slpdb.electroncash.de/explorer" target="_blank" rel="noopener noreferrer">https://slpdb.electroncash.de/explorer<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.
+If you are thinking that you might need your own installation of SLPDB, check our recommendations <a href="/tooling/slpdb/#do-you-need-to-install-slpdb">here</a>.</p> <p>Once you've decided on which option works best for you, the first thing you need to know is how to start querying away.</p> <p>Queries into SLPDB data are made using <a href="https://docs.bitdb.network/docs/query_v3#2-what" target="_blank" rel="noopener noreferrer">bitquery<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. You can do further reading on the operators following the link, but the basic format is the following:</p> <p><img src="/assets/img/ql3.7d60e0dd.png" alt="Bitquery format" title="Bitquery format"></p> <p>Our documentation on <a href="/tooling/slpdb/#mongodb-collections-data-schema">SLPDBs MongoDB Collections &amp; Data Schema</a> will get you acquainted with the different datasets you can  and their field structure. At a quick glance,
+these are the four available DBs:</p> <ul><li><code>t</code> stands for <code>tokens</code> and contains metadata and statistics about each token.</li> <li><code>c</code> stands for <code>confirmed</code> and includes any confirmed SLP transaction, valid or invalid.</li> <li><code>u</code> stands for <code>unconfirmed</code> and includes any unconfirmed SLP transaction, valid or invalid.</li> <li><code>g</code> stands for <code>graphs</code> and contains an item for each valid SLP transaction.</li></ul> <h2 id="execution"><a href="#execution" class="header-anchor">#</a> Execution</h2> <p>To get started you can use two basic ways to query the existing SLPDB instances: browser and node.js.</p> <h3 id="browser"><a href="#browser" class="header-anchor">#</a> Browser</h3> <p>If you visit <a href="https://slpdb.fountainhead.cash" target="_blank" rel="noopener noreferrer">https://slpdb.fountainhead.cash<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> you can edit the query on the top of the page and hit the <code>Run query</code> button on the right side. This will execute your request in
+real time and show the result on the corresponding DB result section underneath.</p> <p>The notation for browser and for JavaScript are a bit different: make sure to use double quote marks instead of single ones, and remove any commas before closing curly brackets.</p> <h3 id="node-js"><a href="#node-js" class="header-anchor">#</a> Node.js</h3> <p>For a more programmatic approach, we will go through how to use Node.js to execute JavaScript snippets.</p> <p>First off, you'll need to use npm to install the required library <code>node-fetch</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> <span class="token function">npm</span> <span class="token function">install</span> node-fetch
+</code></pre></div><p>After that, create a new JavaScript file in the same folder tree where you installed <code>node-fetch</code>. We called this file <code>SLPDB.js</code> and it contains the following</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fetch <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'node-fetch'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> util <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'util'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">fetch_retry</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> options<span class="token punctuation">,</span> n<span class="token operator">=</span><span class="token number">5</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> error<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">fetch_retry</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> options<span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">btoa_ext</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">buf</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Buffer<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token string">'base64'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">query</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">query</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span> query<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> b64 <span class="token operator">=</span> <span class="token function">btoa_ext</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'https://slpdb.fountainhead.cash/q/'</span> <span class="token operator">+</span> b64<span class="token punctuation">;</span>
+
+  <span class="token function">fetch_retry</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> r <span class="token operator">=</span> r<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>r<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>r<span class="token punctuation">[</span><span class="token string">'error'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//EXAMPLE QUERY</span>
+<span class="token keyword">const</span> <span class="token function-variable function">all_tokens</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">limit<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> skip<span class="token operator">=</span><span class="token number">0</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'v'</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">'q'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'db'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'t'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'find'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'sort'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'tokenStats.approx_txns_since_genesis'</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'limit'</span><span class="token operator">:</span> limit<span class="token punctuation">,</span>
+    <span class="token string">'skip'</span><span class="token operator">:</span> skip<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>util<span class="token punctuation">.</span><span class="token function">inspect</span><span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">all_tokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>showHidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> depth<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>  
+<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>fetch_retry</code> is used to deal with occassional network errors that might occur when connecting with 3rd party servers.</p> <p>You can learn more about this implementation <a href="/tooling/slpdb_examples/#how-to-query-slpdb">here</a>.</p> <p>In this case we already added one example query and the call to start the execution. Whenever changing the query,
+make sure to also change the name in the execution call at the end.</p> <p>To execute, just run</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> node SLPDB.js
+</code></pre></div><h2 id="examples"><a href="#examples" class="header-anchor">#</a> Examples</h2> <p>Now that we have pinned down the basics, let's jump on to some examples. Let's start with the one in the code above</p> <h3 id="get-all-tokens"><a href="#get-all-tokens" class="header-anchor">#</a> Get All Tokens</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">all_tokens</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">limit<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> skip<span class="token operator">=</span><span class="token number">0</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'v'</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">'q'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'db'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'t'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'find'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'sort'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'tokenStats.approx_txns_since_genesis'</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'limit'</span><span class="token operator">:</span> limit<span class="token punctuation">,</span>
+    <span class="token string">'skip'</span><span class="token operator">:</span> skip<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Here we are sorting all the tokens in descending order using the <code>approx_txns_since_genesis</code> field, and then limiting this result to only 10 results. This will give us all the details of the tokens with more activity
+in the network.</p> <p>The result looks as follows</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  t<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      _id<span class="token operator">:</span> <span class="token string">'5f107a29df976301040d4c57'</span><span class="token punctuation">,</span>
+      schema_version<span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+      lastUpdatedBlock<span class="token operator">:</span> <span class="token number">644379</span><span class="token punctuation">,</span>
+      tokenDetails<span class="token operator">:</span> <span class="token punctuation">{</span>
+        decimals<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        tokenIdHex<span class="token operator">:</span> <span class="token string">'7f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a1'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2019-04-03 11:28:58'</span><span class="token punctuation">,</span>
+        timestamp_unix<span class="token operator">:</span> <span class="token number">1554290938</span><span class="token punctuation">,</span>
+        transactionType<span class="token operator">:</span> <span class="token string">'GENESIS'</span><span class="token punctuation">,</span>
+        versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        documentUri<span class="token operator">:</span> <span class="token string">'THE REAL HONK SLP TOKEN'</span><span class="token punctuation">,</span>
+        documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        symbol<span class="token operator">:</span> <span class="token string">'HONK'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'HONK HONK'</span><span class="token punctuation">,</span>
+        batonVout<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        containsBaton<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        genesisOrMintQuantity<span class="token operator">:</span> <span class="token string">'100000000000'</span><span class="token punctuation">,</span>
+        sendOutputs<span class="token operator">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      mintBatonUtxo<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      mintBatonStatus<span class="token operator">:</span> <span class="token string">'DEAD_ENDED'</span><span class="token punctuation">,</span>
+      tokenStats<span class="token operator">:</span> <span class="token punctuation">{</span> block_created<span class="token operator">:</span> <span class="token number">576633</span><span class="token punctuation">,</span> approx_txns_since_genesis<span class="token operator">:</span> <span class="token number">344976</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      _pruningState<span class="token operator">:</span> <span class="token punctuation">{</span> pruneHeight<span class="token operator">:</span> <span class="token number">644329</span><span class="token punctuation">,</span> sendCount<span class="token operator">:</span> <span class="token number">51154</span><span class="token punctuation">,</span> mintCount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      _id<span class="token operator">:</span> <span class="token string">'5f107d32df976301040f7544'</span><span class="token punctuation">,</span>
+      schema_version<span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+      lastUpdatedBlock<span class="token operator">:</span> <span class="token number">624791</span><span class="token punctuation">,</span>
+      tokenDetails<span class="token operator">:</span> <span class="token punctuation">{</span>
+        decimals<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        tokenIdHex<span class="token operator">:</span> <span class="token string">'0df768b5485c72645de069b68f66d02205c26f827c608ef5ffa976266d753d50'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2019-06-11 12:18:18'</span><span class="token punctuation">,</span>
+        timestamp_unix<span class="token operator">:</span> <span class="token number">1560255498</span><span class="token punctuation">,</span>
+        transactionType<span class="token operator">:</span> <span class="token string">'GENESIS'</span><span class="token punctuation">,</span>
+        versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        documentUri<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        symbol<span class="token operator">:</span> <span class="token string">'TGT'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'tribeOS Token Test #3'</span><span class="token punctuation">,</span>
+        batonVout<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        containsBaton<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        genesisOrMintQuantity<span class="token operator">:</span> <span class="token string">'50000000'</span><span class="token punctuation">,</span>
+        sendOutputs<span class="token operator">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      mintBatonUtxo<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      mintBatonStatus<span class="token operator">:</span> <span class="token string">'DEAD_ENDED'</span><span class="token punctuation">,</span>
+      tokenStats<span class="token operator">:</span> <span class="token punctuation">{</span> block_created<span class="token operator">:</span> <span class="token number">586567</span><span class="token punctuation">,</span> approx_txns_since_genesis<span class="token operator">:</span> <span class="token number">111463</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      _pruningState<span class="token operator">:</span> <span class="token punctuation">{</span> pruneHeight<span class="token operator">:</span> <span class="token number">623860</span><span class="token punctuation">,</span> sendCount<span class="token operator">:</span> <span class="token number">34894</span><span class="token punctuation">,</span> mintCount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      _id<span class="token operator">:</span> <span class="token string">'5f107972df976301040cc084'</span><span class="token punctuation">,</span>
+      schema_version<span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+      lastUpdatedBlock<span class="token operator">:</span> <span class="token number">644379</span><span class="token punctuation">,</span>
+      tokenDetails<span class="token operator">:</span> <span class="token punctuation">{</span>
+        decimals<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        tokenIdHex<span class="token operator">:</span> <span class="token string">'4de69e374a8ed21cbddd47f2338cc0f479dc58daa2bbe11cd604ca488eca0ddf'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2019-02-24 21:14:35'</span><span class="token punctuation">,</span>
+        timestamp_unix<span class="token operator">:</span> <span class="token number">1551042875</span><span class="token punctuation">,</span>
+        transactionType<span class="token operator">:</span> <span class="token string">'GENESIS'</span><span class="token punctuation">,</span>
+        versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        documentUri<span class="token operator">:</span> <span class="token string">'spiceslp@gmail.com'</span><span class="token punctuation">,</span>
+        documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        symbol<span class="token operator">:</span> <span class="token string">'SPICE'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Spice'</span><span class="token punctuation">,</span>
+        batonVout<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        containsBaton<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        genesisOrMintQuantity<span class="token operator">:</span> <span class="token string">'1000000000'</span><span class="token punctuation">,</span>
+        sendOutputs<span class="token operator">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      mintBatonUtxo<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      mintBatonStatus<span class="token operator">:</span> <span class="token string">'DEAD_ENDED'</span><span class="token punctuation">,</span>
+      tokenStats<span class="token operator">:</span> <span class="token punctuation">{</span> block_created<span class="token operator">:</span> <span class="token number">571212</span><span class="token punctuation">,</span> approx_txns_since_genesis<span class="token operator">:</span> <span class="token number">108218</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      _pruningState<span class="token operator">:</span> <span class="token punctuation">{</span> pruneHeight<span class="token operator">:</span> <span class="token number">644325</span><span class="token punctuation">,</span> sendCount<span class="token operator">:</span> <span class="token number">84505</span><span class="token punctuation">,</span> mintCount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+	<span class="token operator">...</span>
+</code></pre></div><p>As you can see this returns all the fields detailed in the <code>t</code> DB schema, plus an <code>_id</code> field by default.</p> <h3 id="count-total-tokens"><a href="#count-total-tokens" class="header-anchor">#</a> Count Total Tokens</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">count_tokens</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'v'</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">'q'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'db'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'t'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'aggregate'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$match'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$group'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'_id'</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">'count'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token string">'$sum'</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'r'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'f'</span><span class="token operator">:</span> <span class="token string">'[ .[] | {count: .count } ]'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span> t<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">9092</span> <span class="token punctuation">}</span> <span class="token punctuation">]</span> <span class="token punctuation">}</span>
+</code></pre></div><p>Here we get the total amount of SLP tokens created to date. As you can see we make the query for all the tokens and then alter the result with the field <code>'r'</code> before the response is sent back to us, which translates to a
+more lightweight data transfer.</p> <h3 id="look-up-transaction-by-txid"><a href="#look-up-transaction-by-txid" class="header-anchor">#</a> Look up Transaction by TXID</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">tx</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">txid</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'v'</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">'q'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'db'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'aggregate'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$match'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'tx.h'</span><span class="token operator">:</span> txid<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$limit'</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$lookup'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'from'</span><span class="token operator">:</span> <span class="token string">'graphs'</span><span class="token punctuation">,</span>
+          <span class="token string">'localField'</span><span class="token operator">:</span> <span class="token string">'tx.h'</span><span class="token punctuation">,</span>
+          <span class="token string">'foreignField'</span><span class="token operator">:</span> <span class="token string">'graphTxn.txid'</span><span class="token punctuation">,</span>
+          <span class="token string">'as'</span><span class="token operator">:</span> <span class="token string">'graph'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">'$lookup'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'from'</span><span class="token operator">:</span> <span class="token string">'tokens'</span><span class="token punctuation">,</span>
+          <span class="token string">'localField'</span><span class="token operator">:</span> <span class="token string">'slp.detail.tokenIdHex'</span><span class="token punctuation">,</span>
+          <span class="token string">'foreignField'</span><span class="token operator">:</span> <span class="token string">'tokenDetails.tokenIdHex'</span><span class="token punctuation">,</span>
+          <span class="token string">'as'</span><span class="token operator">:</span> <span class="token string">'token'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'limit'</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  c<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      _id<span class="token operator">:</span> <span class="token string">'5f115750df9763010453aabc'</span><span class="token punctuation">,</span>
+      tx<span class="token operator">:</span> <span class="token punctuation">{</span>
+        h<span class="token operator">:</span> <span class="token string">'3098dc4e99622711b61cbd292492482c2233cca76c58a806e58fd9cf616b4a13'</span><span class="token punctuation">,</span>
+        raw<span class="token operator">:</span> <span class="token string">'AgAAAAIjAdFg0NiNjQcNUQNhObSR46+1/jN7VGKDRUxIXXkr9QIAAABqRzBEAiBuDfC/aCD5ES+wFoILXi3t1/zqww6uXGu0gcAKh3QM9QIgfY13PiHNAtlzq0ou1CUp6QOmcIhGu9fcm5iMl2EeGj9BIQM/Jn/sD36ysn+MLjBSs9A7CdNrR95Agv+2OP+zNO8O7v////8jAdFg0NiNjQcNUQNhObSR46+1/jN7VGKDRUxIXXkr9QQAAABrSDBFAiEAus0f0Ow0GH7RTMOkeZiQzp/99GgbwV/uAlSwUBFROSoCICYDFAn+uJtgYohQ3TiASBcAN+OL5zrelRardfIdqbA5QSEDPyZ/7A9+srJ/jC4wUrPQOwnTa0feQIL/tjj/szTvDu7/////BQAAAAAAAAAAQGoEU0xQAAEBBFNFTkQgLTSzpYVbxcdFfTNQnkmfGIuJrRyN85ohkiVsJXtmmUAIAAAAAAX14QAIAAAAAUfTVwAiAgAAAAAAABl2qRQoJQwcCJd0uWdayMSPKX9YhHg10IisIgIAAAAAAAAZdqkUZrIVb3FinIn1v4gss5ILDh5NT6iIrNAHAAAAAAAAGXapFCA7ZL+6qeWDMylbYhFZ3evFkeyxiKwqvgMAAAAAABl2qRRmshVvcWKcifW/iCyzkgsOHk1PqIisAAAAAA=='</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token keyword">in</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token string">'MEQCIG4N8L9oIPkRL7AWggteLe3X/OrDDq5ca7SBwAqHdAz1AiB9jXc+Ic0C2XOrSi7UJSnpA6ZwiEa719ybmIyXYR4aP0E='</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token string">'Az8mf+wPfrKyf4wuMFKz0DsJ02tH3kCC/7Y4/7M07w7u'</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'304402206e0df0bf6820f9112fb016820b5e2dedd7fceac30eae5c6bb481c00a87740cf502207d8d773e21cd02d973ab4a2ed42529e903a6708846bbd7dc9b988c97611e1a3f41 033f267fec0f7eb2b27f8c2e3052b3d03b09d36b47de4082ffb638ffb334ef0eee'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            h<span class="token operator">:</span> <span class="token string">'f52b795d484c458362547b33feb5afe391b4396103510d078d8dd8d060d10123'</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'RzBEAiBuDfC/aCD5ES+wFoILXi3t1/zqww6uXGu0gcAKh3QM9QIgfY13PiHNAtlzq0ou1CUp6QOmcIhGu9fcm5iMl2EeGj9BIQM/Jn/sD36ysn+MLjBSs9A7CdNrR95Agv+2OP+zNO8O7g=='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h0<span class="token operator">:</span> <span class="token string">'304402206e0df0bf6820f9112fb016820b5e2dedd7fceac30eae5c6bb481c00a87740cf502207d8d773e21cd02d973ab4a2ed42529e903a6708846bbd7dc9b988c97611e1a3f41'</span><span class="token punctuation">,</span>
+          h1<span class="token operator">:</span> <span class="token string">'033f267fec0f7eb2b27f8c2e3052b3d03b09d36b47de4082ffb638ffb334ef0eee'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token string">'MEUCIQC6zR/Q7DQYftFMw6R5mJDOn/30aBvBX+4CVLBQEVE5KgIgJgMUCf64m2BiiFDdOIBIFwA344vnOt6VFqt18h2psDlB'</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token string">'Az8mf+wPfrKyf4wuMFKz0DsJ02tH3kCC/7Y4/7M07w7u'</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'3045022100bacd1fd0ec34187ed14cc3a4799890ce9ffdf4681bc15fee0254b0501151392a022026031409feb89b60628850dd388048170037e38be73ade9516ab75f21da9b03941 033f267fec0f7eb2b27f8c2e3052b3d03b09d36b47de4082ffb638ffb334ef0eee'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            h<span class="token operator">:</span> <span class="token string">'f52b795d484c458362547b33feb5afe391b4396103510d078d8dd8d060d10123'</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'SDBFAiEAus0f0Ow0GH7RTMOkeZiQzp/99GgbwV/uAlSwUBFROSoCICYDFAn+uJtgYohQ3TiASBcAN+OL5zrelRardfIdqbA5QSEDPyZ/7A9+srJ/jC4wUrPQOwnTa0feQIL/tjj/szTvDu4='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h0<span class="token operator">:</span> <span class="token string">'3045022100bacd1fd0ec34187ed14cc3a4799890ce9ffdf4681bc15fee0254b0501151392a022026031409feb89b60628850dd388048170037e38be73ade9516ab75f21da9b03941'</span><span class="token punctuation">,</span>
+          h1<span class="token operator">:</span> <span class="token string">'033f267fec0f7eb2b27f8c2e3052b3d03b09d36b47de4082ffb638ffb334ef0eee'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      out<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">106</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token string">'U0xQAA=='</span><span class="token punctuation">,</span>
+          s1<span class="token operator">:</span> <span class="token string">'SLP\u0000'</span><span class="token punctuation">,</span>
+          b2<span class="token operator">:</span> <span class="token string">'AQ=='</span><span class="token punctuation">,</span>
+          s2<span class="token operator">:</span> <span class="token string">'\u0001'</span><span class="token punctuation">,</span>
+          b3<span class="token operator">:</span> <span class="token string">'U0VORA=='</span><span class="token punctuation">,</span>
+          s3<span class="token operator">:</span> <span class="token string">'SEND'</span><span class="token punctuation">,</span>
+          b4<span class="token operator">:</span> <span class="token string">'LTSzpYVbxcdFfTNQnkmfGIuJrRyN85ohkiVsJXtmmUA='</span><span class="token punctuation">,</span>
+          s4<span class="token operator">:</span> <span class="token string">'-4���[��E}3P�I�\u0018���\u001c��!�%l%{f�@'</span><span class="token punctuation">,</span>
+          b5<span class="token operator">:</span> <span class="token string">'AAAAAAX14QA='</span><span class="token punctuation">,</span>
+          s5<span class="token operator">:</span> <span class="token string">'\u0000\u0000\u0000\u0000\u0005��\u0000'</span><span class="token punctuation">,</span>
+          b6<span class="token operator">:</span> <span class="token string">'AAAAAUfTVwA='</span><span class="token punctuation">,</span>
+          s6<span class="token operator">:</span> <span class="token string">'\u0000\u0000\u0000\u0001G�W\u0000'</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'OP_RETURN 534c5000 01 53454e44 2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940 0000000005f5e100 0000000147d35700'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            v<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'agRTTFAAAQEEU0VORCAtNLOlhVvFx0V9M1CeSZ8Yi4mtHI3zmiGSJWwle2aZQAgAAAAABfXhAAgAAAABR9NXAA=='</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h1<span class="token operator">:</span> <span class="token string">'534c5000'</span><span class="token punctuation">,</span>
+          h2<span class="token operator">:</span> <span class="token string">'01'</span><span class="token punctuation">,</span>
+          h3<span class="token operator">:</span> <span class="token string">'53454e44'</span><span class="token punctuation">,</span>
+          h4<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940'</span><span class="token punctuation">,</span>
+          h5<span class="token operator">:</span> <span class="token string">'0000000005f5e100'</span><span class="token punctuation">,</span>
+          h6<span class="token operator">:</span> <span class="token string">'0000000147d35700'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">118</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">169</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b2<span class="token operator">:</span> <span class="token string">'KCUMHAiXdLlnWsjEjyl/WIR4NdA='</span><span class="token punctuation">,</span>
+          s2<span class="token operator">:</span> <span class="token string">'(%\f\u001c\b�t�gZ�ď)X�x5�'</span><span class="token punctuation">,</span>
+          b3<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">136</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b4<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">172</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'OP_DUP OP_HASH160 28250c1c089774b9675ac8c48f297f58847835d0 OP_EQUALVERIFY OP_CHECKSIG'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            v<span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'dqkUKCUMHAiXdLlnWsjEjyl/WIR4NdCIrA=='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qq5z2rqupzthfwt8ttyvfref0avgg7p46qs5t7a3uy'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h2<span class="token operator">:</span> <span class="token string">'28250c1c089774b9675ac8c48f297f58847835d0'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">118</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">169</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b2<span class="token operator">:</span> <span class="token string">'ZrIVb3FinIn1v4gss5ILDh5NT6g='</span><span class="token punctuation">,</span>
+          s2<span class="token operator">:</span> <span class="token string">'f�\u0015oqb�����,��\u000b\u000e\u001eMO�'</span><span class="token punctuation">,</span>
+          b3<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">136</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b4<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">172</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'OP_DUP OP_HASH160 66b2156f71629c89f5bf882cb3920b0e1e4d4fa8 OP_EQUALVERIFY OP_CHECKSIG'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            v<span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'dqkUZrIVb3FinIn1v4gss5ILDh5NT6iIrA=='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h2<span class="token operator">:</span> <span class="token string">'66b2156f71629c89f5bf882cb3920b0e1e4d4fa8'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">118</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">169</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b2<span class="token operator">:</span> <span class="token string">'IDtkv7qp5YMzKVtiEVnd68WR7LE='</span><span class="token punctuation">,</span>
+          s2<span class="token operator">:</span> <span class="token string">' ;d����3)[b\u0011Y��ő�'</span><span class="token punctuation">,</span>
+          b3<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">136</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b4<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">172</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'OP_DUP OP_HASH160 203b64bfbaa9e58333295b621159ddebc591ecb1 OP_EQUALVERIFY OP_CHECKSIG'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            v<span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'dqkUIDtkv7qp5YMzKVtiEVnd68WR7LGIrA=='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qqsrke9lh257tqen99dkyy2emh4uty0vkyflye6lwa'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h2<span class="token operator">:</span> <span class="token string">'203b64bfbaa9e58333295b621159ddebc591ecb1'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          i<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+          b0<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">118</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b1<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">169</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b2<span class="token operator">:</span> <span class="token string">'ZrIVb3FinIn1v4gss5ILDh5NT6g='</span><span class="token punctuation">,</span>
+          s2<span class="token operator">:</span> <span class="token string">'f�\u0015oqb�����,��\u000b\u000e\u001eMO�'</span><span class="token punctuation">,</span>
+          b3<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">136</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          b4<span class="token operator">:</span> <span class="token punctuation">{</span> op<span class="token operator">:</span> <span class="token number">172</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          str<span class="token operator">:</span> <span class="token string">'OP_DUP OP_HASH160 66b2156f71629c89f5bf882cb3920b0e1e4d4fa8 OP_EQUALVERIFY OP_CHECKSIG'</span><span class="token punctuation">,</span>
+          e<span class="token operator">:</span> <span class="token punctuation">{</span>
+            v<span class="token operator">:</span> <span class="token number">245290</span><span class="token punctuation">,</span>
+            i<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            s<span class="token operator">:</span> <span class="token string">'dqkUZrIVb3FinIn1v4gss5ILDh5NT6iIrA=='</span><span class="token punctuation">,</span>
+            a<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          h2<span class="token operator">:</span> <span class="token string">'66b2156f71629c89f5bf882cb3920b0e1e4d4fa8'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      slp<span class="token operator">:</span> <span class="token punctuation">{</span>
+        valid<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        detail<span class="token operator">:</span> <span class="token punctuation">{</span>
+          decimals<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+          tokenIdHex<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940'</span><span class="token punctuation">,</span>
+          transactionType<span class="token operator">:</span> <span class="token string">'SEND'</span><span class="token punctuation">,</span>
+          versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          documentUri<span class="token operator">:</span> <span class="token string">'https://imgur.com/DgGEgpc'</span><span class="token punctuation">,</span>
+          documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          symbol<span class="token operator">:</span> <span class="token string">'┗(°0°)┛'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'To the MOON'</span><span class="token punctuation">,</span>
+          txnBatonVout<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          txnContainsBaton<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          outputs<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              address<span class="token operator">:</span> <span class="token string">'simpleledger:qq5z2rqupzthfwt8ttyvfref0avgg7p46qs5t7a3uy'</span><span class="token punctuation">,</span>
+              amount<span class="token operator">:</span> <span class="token string">'1'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              address<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span><span class="token punctuation">,</span>
+              amount<span class="token operator">:</span> <span class="token string">'55'</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        invalidReason<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        schema_version<span class="token operator">:</span> <span class="token number">79</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      blk<span class="token operator">:</span> <span class="token punctuation">{</span>
+        h<span class="token operator">:</span> <span class="token string">'000000000000000000d8c7625e49216062bd14c555bc4c25284309e230739873'</span><span class="token punctuation">,</span>
+        i<span class="token operator">:</span> <span class="token number">644228</span><span class="token punctuation">,</span>
+        t<span class="token operator">:</span> <span class="token number">1594952220</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      graph<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          _id<span class="token operator">:</span> <span class="token string">'5f115750df9763010453aae7'</span><span class="token punctuation">,</span>
+          tokenDetails<span class="token operator">:</span> <span class="token punctuation">{</span>
+            tokenIdHex<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          graphTxn<span class="token operator">:</span> <span class="token punctuation">{</span>
+            txid<span class="token operator">:</span> <span class="token string">'3098dc4e99622711b61cbd292492482c2233cca76c58a806e58fd9cf616b4a13'</span><span class="token punctuation">,</span>
+            details<span class="token operator">:</span> <span class="token punctuation">{</span>
+              decimals<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              tokenIdHex<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940'</span><span class="token punctuation">,</span>
+              timestamp<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              timestamp_unix<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              transactionType<span class="token operator">:</span> <span class="token string">'SEND'</span><span class="token punctuation">,</span>
+              versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+              documentUri<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              symbol<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              name<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              batonVout<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              containsBaton<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+              genesisOrMintQuantity<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+              sendOutputs<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">'0'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'55'</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            outputs<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                slpAmount<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+                address<span class="token operator">:</span> <span class="token string">'simpleledger:qq5z2rqupzthfwt8ttyvfref0avgg7p46qs5t7a3uy'</span><span class="token punctuation">,</span>
+                vout<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                bchSatoshis<span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+                spendTxid<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                status<span class="token operator">:</span> <span class="token string">'UNSPENT'</span><span class="token punctuation">,</span>
+                invalidReason<span class="token operator">:</span> <span class="token keyword">null</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                slpAmount<span class="token operator">:</span> <span class="token string">'55'</span><span class="token punctuation">,</span>
+                address<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span><span class="token punctuation">,</span>
+                vout<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                bchSatoshis<span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+                spendTxid<span class="token operator">:</span> <span class="token string">'51056834bd6ce492b9be3a9f4688f4b34b1380e6b94fab7ecd3da97c1aa199e6'</span><span class="token punctuation">,</span>
+                status<span class="token operator">:</span> <span class="token string">'SPENT_SAME_TOKEN'</span><span class="token punctuation">,</span>
+                invalidReason<span class="token operator">:</span> <span class="token keyword">null</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            inputs<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                address<span class="token operator">:</span> <span class="token string">'simpleledger:qpnty9t0w93fez04h7yzevujpv8pun204qqp0jfafg'</span><span class="token punctuation">,</span>
+                txid<span class="token operator">:</span> <span class="token string">'f52b795d484c458362547b33feb5afe391b4396103510d078d8dd8d060d10123'</span><span class="token punctuation">,</span>
+                vout<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                bchSatoshis<span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+                slpAmount<span class="token operator">:</span> <span class="token string">'56'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            _blockHash<span class="token operator">:</span> <span class="token string">'AAAAAAAAAAAA2MdiXkkhYGK9FMVVvEwlKEMJ4jBzmHM='</span><span class="token punctuation">,</span>
+            _pruneHeight<span class="token operator">:</span> <span class="token keyword">null</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      token<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          _id<span class="token operator">:</span> <span class="token string">'5f10879ddf9763010416358f'</span><span class="token punctuation">,</span>
+          schema_version<span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+          lastUpdatedBlock<span class="token operator">:</span> <span class="token number">644234</span><span class="token punctuation">,</span>
+          tokenDetails<span class="token operator">:</span> <span class="token punctuation">{</span>
+            decimals<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+            tokenIdHex<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940'</span><span class="token punctuation">,</span>
+            timestamp<span class="token operator">:</span> <span class="token string">'2019-09-19 03:13:02'</span><span class="token punctuation">,</span>
+            timestamp_unix<span class="token operator">:</span> <span class="token number">1568862782</span><span class="token punctuation">,</span>
+            transactionType<span class="token operator">:</span> <span class="token string">'GENESIS'</span><span class="token punctuation">,</span>
+            versionType<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            documentUri<span class="token operator">:</span> <span class="token string">'https://imgur.com/DgGEgpc'</span><span class="token punctuation">,</span>
+            documentSha256Hex<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            symbol<span class="token operator">:</span> <span class="token string">'┗(°0°)┛'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'To the MOON'</span><span class="token punctuation">,</span>
+            batonVout<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            containsBaton<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            genesisOrMintQuantity<span class="token operator">:</span> <span class="token string">'21000000'</span><span class="token punctuation">,</span>
+            sendOutputs<span class="token operator">:</span> <span class="token keyword">null</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          mintBatonUtxo<span class="token operator">:</span> <span class="token string">'2d34b3a5855bc5c7457d33509e499f188b89ad1c8df39a2192256c257b669940:2'</span><span class="token punctuation">,</span>
+          mintBatonStatus<span class="token operator">:</span> <span class="token string">'ALIVE'</span><span class="token punctuation">,</span>
+          tokenStats<span class="token operator">:</span> <span class="token punctuation">{</span> block_created<span class="token operator">:</span> <span class="token number">600877</span><span class="token punctuation">,</span> approx_txns_since_genesis<span class="token operator">:</span> <span class="token number">296</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          _pruningState<span class="token operator">:</span> <span class="token punctuation">{</span> pruneHeight<span class="token operator">:</span> <span class="token number">644224</span><span class="token punctuation">,</span> sendCount<span class="token operator">:</span> <span class="token number">72</span><span class="token punctuation">,</span> mintCount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  u<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>This is a more complex query where we make several lookups to the different DBs to retrieve an aggregate result on the transaction defined in <code>txid</code>. In this case the call to the function should look like this</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//txid example</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>util<span class="token punctuation">.</span><span class="token function">inspect</span><span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">tx</span><span class="token punctuation">(</span><span class="token string">'3098dc4e99622711b61cbd292492482c2233cca76c58a806e58fd9cf616b4a13'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>showHidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> depth<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="more-examples"><a href="#more-examples" class="header-anchor">#</a> More examples</h2> <p>You can find an extensive library of examples in our <a href="/tooling/slpdb_examples/">SLPDB Examples</a> section.</p></div> <div class="content-footer" data-v-4c735fbc><footer class="page-edit" data-v-4c735fbc><div class="edit-link"><a href="https://github.com/simpleledger/simpleledger.github.io/edit/develop/docs/guides/SLPDB-usage.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/18/2020, 4:11:14 AM</span></div></footer> <div class="page-nav" data-v-4c735fbc><p class="inner"><span class="prev">
+      ←
+      <a href="/guides/slp-software-setup/" class="prev">
+        SLP software setup
+      </a></span> <span class="next"><a href="/guides/how-to-use-explorer/">
+        How to use SLP Explorer
+      </a>
+      →
+    </span></p></div></div> <div data-v-4c735fbc></div> <div data-v-4c735fbc></div> </main></div><div class="global-ui"><!----><div></div></div></div>
+    <script src="/assets/js/app.727bd0bc.js" defer></script><script src="/assets/js/2.59409279.js" defer></script><script src="/assets/js/6.cb6c63cc.js" defer></script><script src="/assets/js/10.11bd2d6f.js" defer></script>
+  </body>
+</html>

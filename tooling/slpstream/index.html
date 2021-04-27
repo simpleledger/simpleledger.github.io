@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SLPStream</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="/favicon.ico"><link rel='canonical' href='https://slp.dev/tooling/slpstream/'/>
+    <meta name="description" content="">
+    <meta property="article:modified_time" content="2020-05-03T20:17:46.000Z">
+    <meta property="og:title" content="SLPStream">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slp.dev/tooling/slpstream/">
+    <meta property="og:image" content="https://slp.dev/logo.png">
+    <meta name="twitter:title" content="SLPStream">
+    <meta name="twitter:url" content="https://slp.dev/tooling/slpstream/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://slp.dev/logo.png">
+    <meta name="image" content="https://slp.dev/logo.png">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#5bbad5">
+    
+    <link rel="preload" href="/assets/css/0.styles.a2612fed.css" as="style"><link rel="preload" href="/assets/js/app.727bd0bc.js" as="script"><link rel="preload" href="/assets/js/2.59409279.js" as="script"><link rel="preload" href="/assets/js/6.cb6c63cc.js" as="script"><link rel="preload" href="/assets/js/65.29333f2d.js" as="script"><link rel="prefetch" href="/assets/js/10.11bd2d6f.js"><link rel="prefetch" href="/assets/js/11.3448a0e0.js"><link rel="prefetch" href="/assets/js/12.5390e135.js"><link rel="prefetch" href="/assets/js/13.25949c46.js"><link rel="prefetch" href="/assets/js/14.8adf2b39.js"><link rel="prefetch" href="/assets/js/15.f57aebe1.js"><link rel="prefetch" href="/assets/js/16.a9988494.js"><link rel="prefetch" href="/assets/js/17.b632b9c1.js"><link rel="prefetch" href="/assets/js/18.579a7df4.js"><link rel="prefetch" href="/assets/js/19.07b36477.js"><link rel="prefetch" href="/assets/js/20.34496b79.js"><link rel="prefetch" href="/assets/js/21.aa9572ce.js"><link rel="prefetch" href="/assets/js/22.f611c7a9.js"><link rel="prefetch" href="/assets/js/23.fb176ab4.js"><link rel="prefetch" href="/assets/js/24.ae34a08d.js"><link rel="prefetch" href="/assets/js/25.a4764520.js"><link rel="prefetch" href="/assets/js/26.38ce89a0.js"><link rel="prefetch" href="/assets/js/27.b1edb44d.js"><link rel="prefetch" href="/assets/js/28.9dd2f0e6.js"><link rel="prefetch" href="/assets/js/29.b7ec60f2.js"><link rel="prefetch" href="/assets/js/3.8e11cb09.js"><link rel="prefetch" href="/assets/js/30.b3de8cee.js"><link rel="prefetch" href="/assets/js/31.71a279fa.js"><link rel="prefetch" href="/assets/js/32.5bad9125.js"><link rel="prefetch" href="/assets/js/33.29483670.js"><link rel="prefetch" href="/assets/js/34.42841138.js"><link rel="prefetch" href="/assets/js/35.b99d13bf.js"><link rel="prefetch" href="/assets/js/36.3ce31b1a.js"><link rel="prefetch" href="/assets/js/37.c0523623.js"><link rel="prefetch" href="/assets/js/38.f40e6826.js"><link rel="prefetch" href="/assets/js/39.690a7325.js"><link rel="prefetch" href="/assets/js/4.e08ed9f2.js"><link rel="prefetch" href="/assets/js/40.e3acd5f1.js"><link rel="prefetch" href="/assets/js/41.da4e1119.js"><link rel="prefetch" href="/assets/js/42.f9a30f27.js"><link rel="prefetch" href="/assets/js/43.7f8a50cc.js"><link rel="prefetch" href="/assets/js/44.8e978a53.js"><link rel="prefetch" href="/assets/js/45.92a7fe60.js"><link rel="prefetch" href="/assets/js/46.0072c31d.js"><link rel="prefetch" href="/assets/js/47.d0b4a172.js"><link rel="prefetch" href="/assets/js/48.56897b92.js"><link rel="prefetch" href="/assets/js/49.01e5e0b1.js"><link rel="prefetch" href="/assets/js/5.276ce48f.js"><link rel="prefetch" href="/assets/js/50.e5c0199d.js"><link rel="prefetch" href="/assets/js/51.a3b63ce1.js"><link rel="prefetch" href="/assets/js/52.c689335b.js"><link rel="prefetch" href="/assets/js/53.27b0e617.js"><link rel="prefetch" href="/assets/js/54.90baf352.js"><link rel="prefetch" href="/assets/js/55.75e41a49.js"><link rel="prefetch" href="/assets/js/56.0f4c2dcd.js"><link rel="prefetch" href="/assets/js/57.9fa9f121.js"><link rel="prefetch" href="/assets/js/58.278c7677.js"><link rel="prefetch" href="/assets/js/59.e147c217.js"><link rel="prefetch" href="/assets/js/60.21d56b27.js"><link rel="prefetch" href="/assets/js/61.a94ff6cf.js"><link rel="prefetch" href="/assets/js/62.cfc1d4fb.js"><link rel="prefetch" href="/assets/js/63.ecb1ff64.js"><link rel="prefetch" href="/assets/js/64.5f630325.js"><link rel="prefetch" href="/assets/js/66.07e30d95.js"><link rel="prefetch" href="/assets/js/67.f1a6158d.js"><link rel="prefetch" href="/assets/js/68.e90e7a5e.js"><link rel="prefetch" href="/assets/js/7.0ad4cf60.js"><link rel="prefetch" href="/assets/js/8.3cd91f71.js"><link rel="prefetch" href="/assets/js/9.14c39fac.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a2612fed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/slp-documentation-logo.svg" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/get-started/" class="sidebar-link">Get Started</a></li><li><a href="/terminology/" class="sidebar-link">Terminology</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Specifications</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Guides</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Packages</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Tooling</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tooling/overview/" class="sidebar-link">Overview</a></li><li><a href="/tooling/explorer/" class="sidebar-link">Explorer</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Testing</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SLPDB</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>GS++</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tooling/gs++/" class="sidebar-link">gs++</a></li><li><a href="/tooling/gs++-cli/" class="sidebar-link">gs++-cli</a></li><li><a href="/tooling/slpstream/" aria-current="page" class="active sidebar-link">SLPStream</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tooling/slpstream/#introduction" class="sidebar-link">Introduction</a></li><li class="sidebar-sub-header"><a href="/tooling/slpstream/#examples" class="sidebar-link">Examples</a></li></ul></li><li><a href="/tooling/txdecoder/" class="sidebar-link">txdecoder</a></li><li><a href="/tooling/slpdecoder/" class="sidebar-link">slpdecoder</a></li><li><a href="/tooling/blockdecoder/" class="sidebar-link">blockdecoder</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>BCHD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Servers</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Wallets</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Defunct / Broken</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><a href="/community/" class="sidebar-link">Community</a></li></ul> </aside> <main class="page" data-v-4c735fbc> <div class="theme-default-content content__default" data-v-4c735fbc><h1 id="slpstream"><a href="#slpstream" class="header-anchor">#</a> SLPStream</h1> <div class="custom-block tip"><p class="custom-block-title">View Repo:</p> <p><a href="https://github.com/blockparty-sh/slpstream" target="_blank" rel="noopener noreferrer">https://github.com/blockparty-sh/slpstream<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <p>SLPStream is a frontend API for GS++ that provides a streaming output of new transactions. Unlike <a href="/tooling/slpsocket">SLPSocket</a>, SLPStream uses GS++ to for greater efficiency and has slightly different semantics.</p> <p><a href="https://slpstream.fountainhead.cash/" target="_blank" rel="noopener noreferrer">Try it here →<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p></p><div class="table-of-contents"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#examples">Examples</a><ul><li><a href="#get-all-slp-transactions-and-blocks">Get all SLP Transactions and Blocks</a></li><li><a href="#all-transactions-an-address-sent-or-received">All Transactions an Address Sent or Received</a></li><li><a href="#only-confirmed-honk-transactions">Only Confirmed HONK Transactions</a></li></ul></li></ul></div><p></p> <h2 id="introduction"><a href="#introduction" class="header-anchor">#</a> Introduction</h2> <p>SLPStream querying is done much in the same way as with SLPDB (and SLPSocket of course), except in a reduced fashion. There are no <code>aggregate</code> functions possible, only <code>find</code>. Also, only transactions will be available.. so you can query only on <code>u</code> (unconfirmed / recent transactions) and <code>c</code> (all SLP transactions inside a block, limited transaction information).</p> <p>SLPStream uses base units of tokens instead of the visual representation of decimals. Therefore, you will need to understand the <code>decimals</code> value for a token (perhaps by querying <a href="/tooling/slpdb">SLPDB</a>).</p> <h2 id="examples"><a href="#examples" class="header-anchor">#</a> Examples</h2> <h3 id="get-all-slp-transactions-and-blocks"><a href="#get-all-slp-transactions-and-blocks" class="header-anchor">#</a> Get all SLP Transactions and Blocks</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;q&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;find&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>After a transaction occurs you will see data start to come in:</p> <p><strong>Result:</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;tx&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;h&quot;</span><span class="token operator">:</span> <span class="token string">&quot;223d188b1725d33e57fbb8fc4a85b9eadf1c717555f9a396be820842b99dfc45&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MEQCIAVyweZnlo8RAQS5darvrZCHYkH+DBKh3XuYJvcETNIiAiBgWzcqTMNbc9FTAzEsxHC/lgS/ivA6+2rMZAb0pSCr00E=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AivHQr3Mk94melZTIVsHGXflIa5V+5P31+F0J9NTnrlK&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;304402200572c1e667968f110104b975aaefad90876241fe0c12a1dd7b9826f7044cd2220220605b372a4cc35b73d15303312cc470bf9604bf8af03afb6acc6406f4a520abd341 022bc742bdcc93de267a5653215b071977e521ae55fb93f7d7e17427d3539eb94a&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;h&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1cbde8336c1c456dffb9276bcd706ef0669fb646097919c995c3775dfabb6373&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qqzcyl5h59lus0y825kywlaggte5562mnsdmqw93zw&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;304402200572c1e667968f110104b975aaefad90876241fe0c12a1dd7b9826f7044cd2220220605b372a4cc35b73d15303312cc470bf9604bf8af03afb6acc6406f4a520abd341&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;022bc742bdcc93de267a5653215b071977e521ae55fb93f7d7e17427d3539eb94a&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MEUCIQDEg+Y0cMdm6as2i7MPvsNz3nT9vlz7k1GW97EkM48H1AIgFguaShxFbGhk6gK3/4ymhFsEC+ehgIHsHseqyzhh+xlB&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AivHQr3Mk94melZTIVsHGXflIa5V+5P31+F0J9NTnrlK&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3045022100c483e63470c766e9ab368bb30fbec373de74fdbe5cfb935196f7b124338f07d40220160b9a4a1c456c6864ea02b7ff8ca6845b040be7a18081ec1ec7aacb3861fb1941 022bc742bdcc93de267a5653215b071977e521ae55fb93f7d7e17427d3539eb94a&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;h&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1cbde8336c1c456dffb9276bcd706ef0669fb646097919c995c3775dfabb6373&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qqzcyl5h59lus0y825kywlaggte5562mnsdmqw93zw&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3045022100c483e63470c766e9ab368bb30fbec373de74fdbe5cfb935196f7b124338f07d40220160b9a4a1c456c6864ea02b7ff8ca6845b040be7a18081ec1ec7aacb3861fb1941&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;022bc742bdcc93de267a5653215b071977e521ae55fb93f7d7e17427d3539eb94a&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">106</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;U0xQAA==&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SLP\u0000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AQ==&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\u0001&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b3&quot;</span><span class="token operator">:</span> <span class="token string">&quot;U0VORA==&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s3&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SEND&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b4&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f4iJaC1XNp7Q4yM2+Lfg/+xiWjXMoYP06B/eTnGlOKE=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s4&quot;</span><span class="token operator">:</span> <span class="token string">&quot;��h-W6���#6�����bZ5̡���\u001f�Nq�8�&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b5&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AAAAAAAAAPo=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s5&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\u0000\u0000\u0000\u0000\u0000\u0000\u0000�&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b6&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AAAAAAcXMys=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s6&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\u0000\u0000\u0000\u0000\u0007\u00173+&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OP_RETURN 534c5000 01 53454e44 7f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a1 00000000000000fa 000000000717332b&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;534c5000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;01&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h3&quot;</span><span class="token operator">:</span> <span class="token string">&quot;53454e44&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h4&quot;</span><span class="token operator">:</span> <span class="token string">&quot;7f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a1&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h5&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00000000000000fa&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h6&quot;</span><span class="token operator">:</span> <span class="token string">&quot;000000000717332b&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">118</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">169</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;apkgFSC37EbpCBjd3aT2+72YYuk=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;j� \u0015 ��F�\b\u0018�ݤ����b�&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b3&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">136</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">172</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OP_DUP OP_HASH160 6a99201520b7ec46e90818dddda4f6fbbd9862e9 OP_EQUALVERIFY OP_CHECKSIG&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qp4fjgq4yzm7c3hfpqvdmhdy7mammxrzayc356qc4j&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6a99201520b7ec46e90818dddda4f6fbbd9862e9&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">118</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">169</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BYJ+l6F/yDyHVSxHf6hC80ppW5w=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\u0005�~���&lt;�U,G�B�Ji[�&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b3&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">136</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">172</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OP_DUP OP_HASH160 05827e97a17fc83c87552c477fa842f34a695b9c OP_EQUALVERIFY OP_CHECKSIG&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">546</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qqzcyl5h59lus0y825kywlaggte5562mnsdmqw93zw&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;05827e97a17fc83c87552c477fa842f34a695b9c&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">118</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b1&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">169</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BYJ+l6F/yDyHVSxHf6hC80ppW5w=&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;s2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\u0005�~���&lt;�U,G�B�Ji[�&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b3&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">136</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;b4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;op&quot;</span><span class="token operator">:</span> <span class="token number">172</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OP_DUP OP_HASH160 05827e97a17fc83c87552c477fa842f34a695b9c OP_EQUALVERIFY OP_CHECKSIG&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;e&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">7207049</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;i&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qqzcyl5h59lus0y825kywlaggte5562mnsdmqw93zw&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;h2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;05827e97a17fc83c87552c477fa842f34a695b9c&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;slp&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;valid&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;versionType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;transactionType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SEND&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tokenIdHex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;7f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a1&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;outputs&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qp4fjgq4yzm7c3hfpqvdmhdy7mammxrzayc356qc4j&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;250&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qqzcyl5h59lus0y825kywlaggte5562mnsdmqw93zw&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;118960939&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h3 id="all-transactions-an-address-sent-or-received"><a href="#all-transactions-an-address-sent-or-received" class="header-anchor">#</a> All Transactions an Address Sent or Received</h3> <p>You can use operators like <code>$or</code> and <code>$and</code> to make complex filtering rules.</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;q&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;find&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;$or&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;in.e.a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qpa0uvdqggk64uzamjt80h29zf59x4fl2c9k4dlc7a&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;out.e.a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;simpleledger:qpa0uvdqggk64uzamjt80h29zf59x4fl2c9k4dlc7a&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="only-confirmed-honk-transactions"><a href="#only-confirmed-honk-transactions" class="header-anchor">#</a> Only Confirmed HONK Transactions</h3> <p>See how <code>db</code> is set to <code>c</code>.</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;v&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;q&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;db&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;c&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;find&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;slp.detail.tokenIdHex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;7f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a1&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="content-footer" data-v-4c735fbc><footer class="page-edit" data-v-4c735fbc><div class="edit-link"><a href="https://github.com/simpleledger/simpleledger.github.io/edit/develop/docs/tooling/slpstream.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/3/2020, 8:17:46 PM</span></div></footer> <div class="page-nav" data-v-4c735fbc><p class="inner"><span class="prev">
+      ←
+      <a href="/tooling/gs++-cli/" class="prev">
+        gs++-cli
+      </a></span> <span class="next"><a href="/tooling/txdecoder/">
+        txdecoder
+      </a>
+      →
+    </span></p></div></div> <div data-v-4c735fbc></div> <div data-v-4c735fbc></div> </main></div><div class="global-ui"><!----><div></div></div></div>
+    <script src="/assets/js/app.727bd0bc.js" defer></script><script src="/assets/js/2.59409279.js" defer></script><script src="/assets/js/6.cb6c63cc.js" defer></script><script src="/assets/js/65.29333f2d.js" defer></script>
+  </body>
+</html>
