@@ -1,5 +1,10 @@
 # SLPJS
 
+::: danger
+SLPJS is abandoned
+:::
+
+
 ::: tip View Repo:
 [https://github.com/simpleledger/slpjs](https://github.com/simpleledger/slpjs)
 :::
