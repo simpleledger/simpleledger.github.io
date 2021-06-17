@@ -94,8 +94,6 @@ module.exports = {
         title: 'Packages',
         children: [
           ['/packages/overview', 'Overview'],
-          ['/packages/slpjs', 'SLPJS'],
-          ['/packages/slp-validate', 'SLP-Validate'],
           ['/packages/slp-list', 'SLP-List'],
           ['/packages/bchaddrjs-slp', 'bchaddrjs-SLP'],
           {
@@ -112,6 +110,8 @@ module.exports = {
               ['/packages/slp-mdm.dart', 'SLP-MDM.dart'],
             ]
           },
+          ['/packages/slpjs', 'SLPJS'],
+          ['/packages/slp-validate', 'SLP-Validate']
         ]
       },
       {
