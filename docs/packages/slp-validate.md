@@ -1,5 +1,9 @@
 # SLP-Validate
 
+::: danger
+SLPJS is abandoned
+:::
+
 ::: tip View Repo:
 [https://github.com/simpleledger/slp-validate](https://github.com/simpleledger/slp-validate)
 :::
